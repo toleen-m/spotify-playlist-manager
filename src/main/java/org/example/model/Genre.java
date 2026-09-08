@@ -3,7 +3,7 @@ package org.example.model;
 public enum Genre {
     POP,
     ROCK,
-    HIP_HOP,
+    HIPHOP,
     JAZZ,
     CLASSIQUE,
     ELECTRONIC,

@@ -4,17 +4,17 @@ public class Chanson {
 
     private int id;
     private String titre;
-    private String artist;
+    private String artiste;
     private String album;
     private int annee;
     private Genre genre;
     private int duree;
     private int nbr_ecoute;
 
-    public Chanson(int id, String titre, String artist, String album, int annee, Genre genre, int duree, int nbr_ecoute){
+    public Chanson(int id, String titre, String artiste, String album, int annee, Genre genre, int duree, int nbr_ecoute){
         this.id = id;
         this.titre = titre;
-        this.artist = artist;
+        this.artiste = artiste;
         this.album = album;
         this.annee = annee;
         this.genre = genre;
@@ -30,8 +30,8 @@ public class Chanson {
         return titre;
     }
 
-    public String getArtist() {
-        return artist;
+    public String getArtiste() {
+        return artiste;
     }
 
     public String getAlbum() {
