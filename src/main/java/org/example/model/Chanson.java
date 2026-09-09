@@ -54,6 +54,9 @@ public class Chanson {
         return nbr_ecoute;
     }
 
+    public void setNbr_ecoute(int nbr_ecoute) {
+        this.nbr_ecoute = nbr_ecoute;
+    }
 
     public void incrementerEcoutes(){
         nbr_ecoute++;
