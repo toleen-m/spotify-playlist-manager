@@ -86,4 +86,13 @@ public class Playlist {
         return true;
     }
 
+    public boolean contient(Chanson chanson){
+        for (Chanson c : chansons){
+            if (c.getId() == chanson.getId()){
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

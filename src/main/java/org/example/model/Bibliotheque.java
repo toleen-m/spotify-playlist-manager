@@ -9,17 +9,17 @@ public class Bibliotheque {
     private List<Playlist> playlists;
 
 
-    public Bibliotheque(){
-        this.chansons = new ArrayList<>();
+    public Bibliotheque(List<Chanson> chansons){
+        this.chansons = new ArrayList<>(chansons);
         this.playlists = new ArrayList<>();
     }
 
     public List<Chanson> getChansons() {
-        return new ArrayList<>(chansons);
+        return chansons;
     }
 
     public List<Playlist> getPlaylists(){
-        return new ArrayList<>(playlists);
+        return playlists;
     }
 
 
