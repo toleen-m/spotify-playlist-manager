@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.controller.MainController">
+
+    <top>
+        <VBox spacing="10">
+            <Label text="Spotify Playlist Manager"/>
+
+            <HBox spacing="10">
+                <TextField promptText="Rechercher une chanson..."/>
+                <ComboBox promptText="Genre"/>
+                <ComboBox promptText="Trier par"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <TableView fx:id="tableChansons">
+            <columns>
+                <TableColumn fx:id="colTitre" text="Titre" prefWidth="180"/>
+                <TableColumn fx:id="colArtiste" text="Artiste" prefWidth="150"/>
+                <TableColumn fx:id="colAlbum" text="Album" prefWidth="150"/>
+                <TableColumn fx:id="colAnnee" text="Année" prefWidth="80"/>
+                <TableColumn fx:id="colGenre" text="Genre" prefWidth="100"/>
+                <TableColumn fx:id="colDuree" text="Durée" prefWidth="80"/>
+                <TableColumn fx:id="colEcoutes" text="Écoutes" prefWidth="100"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <right>
+        <VBox spacing="10">
+            <Label text="Playlists"/>
+            <ListView prefWidth="200"/>
+            <Button text="Créer une playlist"/>
+            <Button text="Ajouter à la playlist"/>
+            <Button text="Retirer"/>
+        </VBox>
+    </right>
+
+    <bottom>
+        <HBox spacing="10">
+            <Button text="Previous"/>
+            <Button text="Play"/>
+            <Button text="Pause"/>
+            <Button text="Next"/>
+            <Button text="Shuffle"/>
+            <Slider prefWidth="250"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
