@@ -1,0 +1,30 @@
+.root {
+    -fx-font-family: Arial;
+    -fx-padding: 10;
+}
+
+.label {
+    -fx-padding: 5;
+}
+
+.hbox {
+    -fx-spacing: 10;
+    -fx-padding: 5;
+}
+
+.vbox {
+    -fx-spacing: 10;
+    -fx-padding: 10;
+}
+
+.button {
+    -fx-padding: 5 10;
+}
+
+.table-view {
+    -fx-pref-height: 400;
+}
+
+.list-view {
+    -fx-pref-width: 180;
+}

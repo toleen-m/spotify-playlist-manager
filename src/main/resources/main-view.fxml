@@ -3,17 +3,18 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+
 <BorderPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.example.controller.MainController">
+            fx:controller="org.example.controller.MainController"
+            stylesheets="@style.css">
 
     <top>
-        <VBox spacing="10">
+        <VBox>
             <Label text="Spotify Playlist Manager"/>
-
-            <HBox spacing="10">
-                <TextField promptText="Rechercher une chanson..."/>
+            <HBox>
+                <TextField promptText="Rechercher..."/>
                 <ComboBox promptText="Genre"/>
-                <ComboBox promptText="Trier par"/>
+                <ComboBox promptText="Trier"/>
             </HBox>
         </VBox>
     </top>
@@ -21,36 +22,38 @@
     <center>
         <TableView fx:id="tableChansons">
             <columns>
-                <TableColumn fx:id="colTitre" text="Titre" prefWidth="180"/>
-                <TableColumn fx:id="colArtiste" text="Artiste" prefWidth="150"/>
-                <TableColumn fx:id="colAlbum" text="Album" prefWidth="150"/>
-                <TableColumn fx:id="colAnnee" text="Année" prefWidth="80"/>
-                <TableColumn fx:id="colGenre" text="Genre" prefWidth="100"/>
-                <TableColumn fx:id="colDuree" text="Durée" prefWidth="80"/>
-                <TableColumn fx:id="colEcoutes" text="Écoutes" prefWidth="100"/>
+                <TableColumn fx:id="colTitre" text="Titre"/>
+                <TableColumn fx:id="colArtiste" text="Artiste"/>
+                <TableColumn fx:id="colAlbum" text="Album"/>
+                <TableColumn fx:id="colAnnee" text="Année"/>
+                <TableColumn fx:id="colGenre" text="Genre"/>
+                <TableColumn fx:id="colDuree" text="Durée"/>
+                <TableColumn fx:id="colEcoutes" text="Écoutes"/>
             </columns>
         </TableView>
     </center>
 
     <right>
-        <VBox spacing="10">
+        <VBox>
             <Label text="Playlists"/>
-            <ListView prefWidth="200"/>
-            <Button text="Créer une playlist"/>
-            <Button text="Ajouter à la playlist"/>
-            <Button text="Retirer"/>
+            <ListView fx:id="listePlaylists"/>
+            <Button text="Créer" onAction="#creerPlaylist"/>
+            <Button text="Ajouter" onAction="#ajouterPlaylist"/>
+            <Button text="Retirer" onAction="#retirerPlaylist"/>
         </VBox>
     </right>
 
     <bottom>
-        <HBox spacing="10">
-            <Button text="Previous"/>
-            <Button text="Play"/>
-            <Button text="Pause"/>
-            <Button text="Next"/>
-            <Button text="Shuffle"/>
-            <Slider prefWidth="250"/>
-        </HBox>
+        <VBox>
+            <Label fx:id="chansonActuelle" text="Aucune chanson"/>
+            <HBox>
+                <Button text="Previous" onAction="#precedent"/>
+                <Button text="Play" onAction="#play"/>
+                <Button text="Pause" onAction="#pause"/>
+                <Button text="Next" onAction="#suivant"/>
+                <Button text="Shuffle" onAction="#shuffle"/>
+            </HBox>
+        </VBox>
     </bottom>
 
 </BorderPane>
