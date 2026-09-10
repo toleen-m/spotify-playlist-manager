@@ -15,11 +15,11 @@ public class Bibliotheque {
     }
 
     public List<Chanson> getChansons() {
-        return chansons;
+        return new ArrayList<>(chansons);
     }
 
     public List<Playlist> getPlaylists(){
-        return playlists;
+        return new ArrayList<>(playlists);
     }
 
 
@@ -47,6 +47,21 @@ public class Bibliotheque {
 
     public boolean supprimerPlaylist(Playlist playlist){
         return playlists.removeIf(p -> p.getId() == playlist.getId());
+    }
+
+
+    public Playlist getPlaylist(String nom){
+        if (nom == null || nom.isEmpty()) {
+            return null;
+        }
+
+        for (Playlist playlist : playlists) {
+            if (playlist.getNom().equals(nom)) {
+                return playlist;
+            }
+        }
+
+        return null;
     }
 
 }

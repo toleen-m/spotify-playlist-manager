@@ -3,6 +3,7 @@ package org.example;
 import org.example.model.Bibliotheque;
 import org.example.model.Chanson;
 import org.example.model.Genre;
+import org.example.model.Playlist;
 import org.example.service.*;
 import org.example.util.LecteurCSV;
 
@@ -40,6 +41,7 @@ public class TestCSV {
         ServiceFiltre serviceFiltre = new ServiceFiltre(bibliotheque);
         ServiceRecherche serviceRecherche = new ServiceRecherche(bibliotheque);
         ServicePagination servicePagination = new ServicePagination();
+        ServicePlaylist servicePlaylist = new ServicePlaylist(bibliotheque);
 
 
         System.out.println("\n===== TEST FILTRE =====");
@@ -72,6 +74,46 @@ public class TestCSV {
 
 
 
+        System.out.println("\n===== TEST GESTION PLAYLIST =====");
+        servicePlaylist.creerPlaylist("Mon top");
+
+        System.out.println("Nombre de playlists : " + bibliotheque.getPlaylists().size());
+        Playlist playlist = bibliotheque.getPlaylists().get(0);
+        System.out.println("Playlist créée : " + playlist.getNom());
+
+
+        System.out.println("\n===== AJOUT CHANSON DANS PLAYLIST =====");
+        for (int i = 0; i < 5; i++) {
+            servicePlaylist.ajouterChanson(
+                    playlist,
+                    chansons.get(i)
+            );
+        }
+        System.out.println("Nombre de chansons dans la playlist : " + playlist.getChansons().size());
+
+
+        System.out.println("\n===== TESTER DOUBLON DANS PLAYLIST =====");
+        servicePlaylist.ajouterChanson(
+                playlist,
+                chansons.get(0)
+        );
+
+        System.out.println("Après ajout du doublon : " + playlist.getChansons().size());
+
+
+        System.out.println("\n===== RETIRER CHANSON DANS PLAYLIST =====");
+        servicePlaylist.retirerChanson(
+                playlist,
+                chansons.get(0)
+        );
+        System.out.println("Après suppression : " + playlist.getChansons().size());
+        for (Chanson chanson : playlist.getChansons()) {
+            System.out.println(chanson.getTitre() +" - "+ chanson.getArtiste() +" - "+ chanson.getGenre());
+        }
+
+
+        System.out.println("\n===== DUREE TOTAL DANS PLAYLIST =====");
+        System.out.println("Durée totale : " + playlist.getDureeTotale());
 
     }
 }
