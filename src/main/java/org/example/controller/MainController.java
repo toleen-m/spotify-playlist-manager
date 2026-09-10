@@ -10,8 +10,14 @@ import org.example.model.Playlist;
 import org.example.service.LecteurSimule;
 import org.example.service.ServicePlaylist;
 import org.example.util.LecteurCSV;
-
+import org.example.service.ServiceRecherche;
 import java.util.List;
+import org.example.model.Genre;
+import org.example.service.ServiceFiltre;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+
 
 public class MainController {
 
@@ -23,13 +29,18 @@ public class MainController {
     @FXML private TableColumn<Chanson, String> colGenre;
     @FXML private TableColumn<Chanson, Integer> colDuree;
     @FXML private TableColumn<Chanson, Integer> colEcoutes;
-
+    @FXML private TextField champRecherche;
     @FXML private ListView<Playlist> listePlaylists;
     @FXML private Label chansonActuelle;
+    @FXML private ComboBox<String> comboGenre;
+    @FXML private ComboBox<String> comboTri;
 
+
+    private ServiceRecherche serviceRecherche;
     private Bibliotheque bibliotheque;
     private ServicePlaylist servicePlaylist;
     private LecteurSimule lecteurSimule;
+    private ServiceFiltre serviceFiltre;
 
     @FXML
     public void initialize() {
@@ -45,34 +56,130 @@ public class MainController {
         List<Chanson> chansons = lecteur.charger();
 
         bibliotheque = new Bibliotheque(chansons);
+
         servicePlaylist = new ServicePlaylist(bibliotheque);
+        serviceRecherche = new ServiceRecherche(bibliotheque);
+        serviceFiltre = new ServiceFiltre(bibliotheque);
         lecteurSimule = new LecteurSimule(bibliotheque);
 
-        tableChansons.setItems(FXCollections.observableArrayList(chansons));
+        tableChansons.setItems(
+                FXCollections.observableArrayList(chansons)
+        );
+
+        listePlaylists.setCellFactory(liste -> new ListCell<>() {
+            @Override
+            protected void updateItem(Playlist playlist, boolean empty) {
+                super.updateItem(playlist, empty);
+
+                if (empty || playlist == null) {
+                    setText(null);
+                } else {
+                    setText(playlist.getNom());
+                }
+            }
+        });
+
+        listePlaylists.getSelectionModel()
+                .selectedItemProperty()
+                .addListener((observable, anciennePlaylist, nouvellePlaylist) -> {
+
+                    if (nouvellePlaylist != null) {
+                        tableChansons.setItems(
+                                FXCollections.observableArrayList(
+                                        nouvellePlaylist.getChansons()
+                                )
+                        );
+                    }
+                });
+
+        comboGenre.getItems().add("Tous");
+
+        for (Genre genre : Genre.values()) {
+            comboGenre.getItems().add(genre.name());
+        }
+
+        comboGenre.getSelectionModel().selectFirst();
+
+        comboTri.getItems().addAll(
+                "Titre",
+                "Artiste",
+                "Durée",
+                "Année",
+                "Écoutes"
+        );
+
+        comboGenre.setOnAction(event -> {
+            String choix = comboGenre.getValue();
+
+            if (choix.equals("Tous")) {
+                tableChansons.setItems(FXCollections.observableArrayList(bibliotheque.getChansons()));
+            } else {
+                Genre genre = Genre.valueOf(choix);
+
+                tableChansons.setItems(FXCollections.observableArrayList(
+                        serviceFiltre.filtrerChansons(genre, null, null, null)
+                ));
+            }
+        });
+
+        champRecherche.textProperty().addListener((observable, ancienTexte, nouveauTexte) -> {
+            List<Chanson> resultat = bibliotheque.getChansons().stream()
+                    .filter(chanson ->
+                            chanson.getTitre().toLowerCase().contains(nouveauTexte.toLowerCase())
+                                    || chanson.getArtiste().toLowerCase().contains(nouveauTexte.toLowerCase())
+                    )
+                    .toList();
+
+            tableChansons.setItems(FXCollections.observableArrayList(resultat));
+        });
     }
 
     @FXML
     private void creerPlaylist() {
         TextInputDialog dialog = new TextInputDialog();
 
+        dialog.setTitle("Nouvelle playlist");
+        dialog.setHeaderText("Créer une playlist");
+        dialog.setContentText("Nom :");
         dialog.showAndWait().ifPresent(nom -> {
             servicePlaylist.creerPlaylist(nom);
+
             listePlaylists.setItems(
                     FXCollections.observableArrayList(bibliotheque.getPlaylists())
             );
+
+            listePlaylists.getSelectionModel().selectLast();
         });
     }
 
     @FXML
     private void ajouterPlaylist() {
         Playlist playlist = listePlaylists.getSelectionModel().getSelectedItem();
-        Chanson chanson = tableChansons.getSelectionModel().getSelectedItem();
 
-        if (playlist != null && chanson != null) {
-            servicePlaylist.ajouterChanson(playlist, chanson);
+        if (playlist == null) {
+            return;
         }
-    }
 
+        tableChansons.setItems(
+                FXCollections.observableArrayList(bibliotheque.getChansons())
+        );
+
+        tableChansons.setOnMouseClicked(event -> {
+            if (event.getClickCount() == 2) {
+                Chanson chanson = tableChansons.getSelectionModel().getSelectedItem();
+
+                if (chanson != null) {
+                    servicePlaylist.ajouterChanson(playlist, chanson);
+
+                    tableChansons.setItems(
+                            FXCollections.observableArrayList(playlist.getChansons())
+                    );
+
+                    tableChansons.setOnMouseClicked(null);
+                }
+            }
+        });
+    }
     @FXML
     private void retirerPlaylist() {
         Playlist playlist = listePlaylists.getSelectionModel().getSelectedItem();
@@ -80,6 +187,10 @@ public class MainController {
 
         if (playlist != null && chanson != null) {
             servicePlaylist.retirerChanson(playlist, chanson);
+
+            tableChansons.setItems(
+                    FXCollections.observableArrayList(playlist.getChansons())
+            );
         }
     }
 
@@ -120,4 +231,5 @@ public class MainController {
             chansonActuelle.setText(chanson.getTitre() + " - " + chanson.getArtiste());
         }
     }
+
 }

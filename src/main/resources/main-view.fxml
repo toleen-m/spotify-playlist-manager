@@ -12,9 +12,9 @@
         <VBox>
             <Label text="Spotify Playlist Manager"/>
             <HBox>
-                <TextField promptText="Rechercher..."/>
-                <ComboBox promptText="Genre"/>
-                <ComboBox promptText="Trier"/>
+                <TextField fx:id="champRecherche" promptText="Rechercher..."/>
+                <ComboBox fx:id="comboGenre" promptText="Genre"/>
+                <ComboBox fx:id="comboTri" promptText="Trier"/>
             </HBox>
         </VBox>
     </top>
