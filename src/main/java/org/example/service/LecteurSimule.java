@@ -10,19 +10,23 @@ public class LecteurSimule {
     private int indexActuel;
     private boolean enLecture;
     private final Random random;
-    private double progression;
+    private int tempsActuel;
 
     public LecteurSimule(Bibliotheque bibliotheque) {
         this.bibliotheque = bibliotheque;
         this.indexActuel = 0;
         this.enLecture = false;
         this.random = new Random();
-        this.progression = 0.0;
+        this.tempsActuel = 0;
     }
 
     // a faire
     public double getProgression() {
-        return progression;
+        Chanson chanson = getChansonActuelle();
+        if(chanson == null || chanson.getDuree() <= 0){
+            return 0.0;
+        }
+        return (double) tempsActuel / chanson.getDuree();
     }
 
     public Chanson getChansonActuelle() {
@@ -57,7 +61,7 @@ public class LecteurSimule {
         if (indexActuel >= bibliotheque.getChansons().size()) {
             indexActuel = 0;
         }
-        progression = 0.0;
+        tempsActuel = 0;
         return getChansonActuelle();
     }
 
@@ -70,7 +74,7 @@ public class LecteurSimule {
         if (indexActuel < 0) {
             indexActuel = bibliotheque.getChansons().size() - 1;
         }
-        progression = 0.0;
+        tempsActuel = 0;
         return getChansonActuelle();
     }
 
@@ -80,7 +84,23 @@ public class LecteurSimule {
             return null;
         }
         indexActuel = random.nextInt(bibliotheque.getChansons().size());
+        tempsActuel = 0;
         return getChansonActuelle();
+    }
+
+    public Chanson avancerTemps(int secondes) {
+        if (!enLecture) {
+            return getChansonActuelle();
+        }
+        Chanson chanson = getChansonActuelle();
+        if (chanson == null) {
+            return null;
+        }
+        tempsActuel += secondes;
+        if (tempsActuel >= chanson.getDuree()) {
+            return suivant();
+        }
+        return chanson;
     }
 
 }
