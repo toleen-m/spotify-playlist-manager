@@ -1,9 +1,6 @@
 package org.example;
 
-import org.example.model.Bibliotheque;
-import org.example.model.Chanson;
-import org.example.model.Genre;
-import org.example.model.Playlist;
+import org.example.model.*;
 import org.example.service.*;
 import org.example.util.LecteurCSV;
 
