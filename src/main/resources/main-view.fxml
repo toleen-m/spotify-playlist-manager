@@ -51,7 +51,7 @@
             <ListView fx:id="listePlaylists"/>
             <Button text="Créer playlist" onAction="#creerPlaylist"/>
             <Button text="Ajouter chanson" onAction="#ajouterPlaylist"/>
-            <Button text="Retirer chanson" onAction="#retirerPlaylist"/>
+            <Button text="Supprimer playlist" onAction="#supprimerPlaylist"/>
         </VBox>
     </right>
 

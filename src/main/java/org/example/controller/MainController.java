@@ -272,6 +272,20 @@ public class MainController {
         }
     }
 
+    @FXML
+    private void supprimerPlaylist() {
+        Playlist playlist = listePlaylists.getSelectionModel().getSelectedItem();
+
+        if (playlist != null) {
+            servicePlaylist.supprimerPlaylist(playlist);
+
+            listePlaylists.setItems(
+                    FXCollections.observableArrayList(
+                            bibliotheque.getPlaylists()
+                    )
+            );
+        }
+    }
 
     @FXML
     private void ouvrirPlaylist() {
