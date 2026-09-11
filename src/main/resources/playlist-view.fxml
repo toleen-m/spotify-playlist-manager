@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.controller.PlaylistController"
+      stylesheets="@style.css"
+      spacing="10">
+
+    <Label fx:id="nomPlaylist" text="Playlist"/>
+
+    <TableView fx:id="tablePlaylist">
+        <columns>
+            <TableColumn fx:id="colTitre" text="Titre"/>
+            <TableColumn fx:id="colArtiste" text="Artiste"/>
+            <TableColumn fx:id="colDuree" text="Durée"/>
+        </columns>
+    </TableView>
+
+    <Button text="Retirer" onAction="#retirerChanson"/>
+
+</VBox>

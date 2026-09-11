@@ -13,6 +13,7 @@
             <Label text="Spotify Playlist Manager"/>
             <HBox>
                 <TextField fx:id="champRecherche" promptText="Rechercher..."/>
+                <ComboBox fx:id="comboRecherche" promptText="Rechercher par"/>
                 <ComboBox fx:id="comboGenre" promptText="Genre"/>
                 <ComboBox fx:id="comboTri" promptText="Trier"/>
             </HBox>
@@ -36,7 +37,7 @@
     <right>
         <VBox>
             <Label text="Playlists"/>
-            <ListView fx:id="listePlaylists"/>
+            <ListView fx:id="listePlaylists" onMouseClicked="#ouvrirPlaylist"/>
             <Button text="Créer" onAction="#creerPlaylist"/>
             <Button text="Ajouter" onAction="#ajouterPlaylist"/>
             <Button text="Retirer" onAction="#retirerPlaylist"/>

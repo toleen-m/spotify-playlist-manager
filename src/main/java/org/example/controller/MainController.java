@@ -14,7 +14,10 @@ import org.example.service.ServiceRecherche;
 import java.util.List;
 import org.example.model.Genre;
 import org.example.service.ServiceFiltre;
-
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import java.util.ArrayList;
 import java.util.Comparator;
 
@@ -30,10 +33,11 @@ public class MainController {
     @FXML private TableColumn<Chanson, Integer> colDuree;
     @FXML private TableColumn<Chanson, Integer> colEcoutes;
     @FXML private TextField champRecherche;
-    @FXML private ListView<Playlist> listePlaylists;
-    @FXML private Label chansonActuelle;
+    @FXML private ComboBox<String> comboRecherche;
     @FXML private ComboBox<String> comboGenre;
     @FXML private ComboBox<String> comboTri;
+    @FXML private ListView<Playlist> listePlaylists;
+    @FXML private Label chansonActuelle;
 
 
     private ServiceRecherche serviceRecherche;
@@ -79,19 +83,6 @@ public class MainController {
             }
         });
 
-        listePlaylists.getSelectionModel()
-                .selectedItemProperty()
-                .addListener((observable, anciennePlaylist, nouvellePlaylist) -> {
-
-                    if (nouvellePlaylist != null) {
-                        tableChansons.setItems(
-                                FXCollections.observableArrayList(
-                                        nouvellePlaylist.getChansons()
-                                )
-                        );
-                    }
-                });
-
         comboGenre.getItems().add("Tous");
 
         for (Genre genre : Genre.values()) {
@@ -108,6 +99,15 @@ public class MainController {
                 "Écoutes"
         );
 
+        comboRecherche.getItems().addAll(
+                "Tous",
+                "Titre",
+                "Artiste"
+        );
+
+        comboRecherche.getSelectionModel().selectFirst();
+
+
         comboGenre.setOnAction(event -> {
             String choix = comboGenre.getValue();
 
@@ -121,16 +121,42 @@ public class MainController {
                 ));
             }
         });
-
         champRecherche.textProperty().addListener((observable, ancienTexte, nouveauTexte) -> {
+
+            String choix = comboRecherche.getValue();
+
             List<Chanson> resultat = bibliotheque.getChansons().stream()
-                    .filter(chanson ->
-                            chanson.getTitre().toLowerCase().contains(nouveauTexte.toLowerCase())
-                                    || chanson.getArtiste().toLowerCase().contains(nouveauTexte.toLowerCase())
-                    )
+                    .filter(chanson -> {
+
+                        if (choix.equals("Titre")) {
+                            return chanson.getTitre()
+                                    .toLowerCase()
+                                    .contains(nouveauTexte.toLowerCase());
+                        }
+
+                        if (choix.equals("Artiste")) {
+                            return chanson.getArtiste()
+                                    .toLowerCase()
+                                    .contains(nouveauTexte.toLowerCase());
+                        }
+
+                        return chanson.getTitre()
+                                .toLowerCase()
+                                .contains(nouveauTexte.toLowerCase())
+                                || chanson.getArtiste()
+                                .toLowerCase()
+                                .contains(nouveauTexte.toLowerCase());
+                    })
                     .toList();
 
-            tableChansons.setItems(FXCollections.observableArrayList(resultat));
+            tableChansons.setItems(
+                    FXCollections.observableArrayList(resultat)
+            );
+            });
+        listePlaylists.setOnMouseClicked(event -> {
+            if (event.getClickCount() == 2) {
+                ouvrirPlaylist();
+            }
         });
     }
 
@@ -193,6 +219,36 @@ public class MainController {
             );
         }
     }
+
+
+    @FXML
+    private void ouvrirPlaylist() {
+        Playlist playlist = listePlaylists.getSelectionModel().getSelectedItem();
+
+        if (playlist == null) {
+            return;
+        }
+
+        try {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/playlist-view.fxml")
+            );
+
+            Parent root = loader.load();
+
+            PlaylistController controller = loader.getController();
+            controller.setPlaylist(playlist, servicePlaylist);
+
+            Stage stage = new Stage();
+            stage.setTitle(playlist.getNom());
+            stage.setScene(new Scene(root));
+            stage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     @FXML
     private void play() {
