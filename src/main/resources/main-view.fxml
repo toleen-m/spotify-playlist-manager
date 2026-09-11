@@ -19,19 +19,28 @@
             </HBox>
         </VBox>
     </top>
-
     <center>
-        <TableView fx:id="tableChansons">
-            <columns>
-                <TableColumn fx:id="colTitre" text="Titre"/>
-                <TableColumn fx:id="colArtiste" text="Artiste"/>
-                <TableColumn fx:id="colAlbum" text="Album"/>
-                <TableColumn fx:id="colAnnee" text="Année"/>
-                <TableColumn fx:id="colGenre" text="Genre"/>
-                <TableColumn fx:id="colDuree" text="Durée"/>
-                <TableColumn fx:id="colEcoutes" text="Écoutes"/>
-            </columns>
-        </TableView>
+        <VBox>
+
+            <TableView fx:id="tableChansons">
+                <columns>
+                    <TableColumn fx:id="colTitre" text="Titre"/>
+                    <TableColumn fx:id="colArtiste" text="Artiste"/>
+                    <TableColumn fx:id="colAlbum" text="Album"/>
+                    <TableColumn fx:id="colAnnee" text="Année"/>
+                    <TableColumn fx:id="colGenre" text="Genre"/>
+                    <TableColumn fx:id="colDuree" text="Durée"/>
+                    <TableColumn fx:id="colEcoutes" text="Écoutes"/>
+                </columns>
+            </TableView>
+
+            <HBox spacing="10">
+                <Button text="←" onAction="#pagePrecedente"/>
+                <Label fx:id="labelPage" text="Page 1"/>
+                <Button text="→" onAction="#pageSuivante"/>
+            </HBox>
+
+        </VBox>
     </center>
 
     <right>
@@ -43,10 +52,12 @@
             <Button text="Retirer" onAction="#retirerPlaylist"/>
         </VBox>
     </right>
-
     <bottom>
-        <VBox>
+        <VBox spacing="5">
+
             <Label fx:id="chansonActuelle" text="Aucune chanson"/>
+            <ProgressBar fx:id="progressionChanson" progress="0" prefWidth="300"/>
+            <Label fx:id="ecoutesChanson" text="Écoutes : 0"/>
             <HBox>
                 <Button text="Previous" onAction="#precedent"/>
                 <Button text="Play" onAction="#play"/>
@@ -54,6 +65,7 @@
                 <Button text="Next" onAction="#suivant"/>
                 <Button text="Shuffle" onAction="#shuffle"/>
             </HBox>
+
         </VBox>
     </bottom>
 

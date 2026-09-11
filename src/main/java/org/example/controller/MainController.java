@@ -20,24 +20,44 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.util.ArrayList;
 import java.util.Comparator;
-
+import org.example.service.ServicePagination;
 
 public class MainController {
 
-    @FXML private TableView<Chanson> tableChansons;
-    @FXML private TableColumn<Chanson, String> colTitre;
-    @FXML private TableColumn<Chanson, String> colArtiste;
-    @FXML private TableColumn<Chanson, String> colAlbum;
-    @FXML private TableColumn<Chanson, Integer> colAnnee;
-    @FXML private TableColumn<Chanson, String> colGenre;
-    @FXML private TableColumn<Chanson, Integer> colDuree;
-    @FXML private TableColumn<Chanson, Integer> colEcoutes;
-    @FXML private TextField champRecherche;
-    @FXML private ComboBox<String> comboRecherche;
-    @FXML private ComboBox<String> comboGenre;
-    @FXML private ComboBox<String> comboTri;
-    @FXML private ListView<Playlist> listePlaylists;
-    @FXML private Label chansonActuelle;
+    @FXML
+    private TableView<Chanson> tableChansons;
+    @FXML
+    private TableColumn<Chanson, String> colTitre;
+    @FXML
+    private TableColumn<Chanson, String> colArtiste;
+    @FXML
+    private TableColumn<Chanson, String> colAlbum;
+    @FXML
+    private TableColumn<Chanson, Integer> colAnnee;
+    @FXML
+    private TableColumn<Chanson, String> colGenre;
+    @FXML
+    private TableColumn<Chanson, Integer> colDuree;
+    @FXML
+    private TableColumn<Chanson, Integer> colEcoutes;
+    @FXML
+    private TextField champRecherche;
+    @FXML
+    private ComboBox<String> comboRecherche;
+    @FXML
+    private ComboBox<String> comboGenre;
+    @FXML
+    private ComboBox<String> comboTri;
+    @FXML
+    private ListView<Playlist> listePlaylists;
+    @FXML
+    private Label chansonActuelle;
+    @FXML
+    private ProgressBar progressionChanson;
+    @FXML
+    private Label ecoutesChanson;
+    @FXML
+    private Label labelPage;
 
 
     private ServiceRecherche serviceRecherche;
@@ -45,6 +65,10 @@ public class MainController {
     private ServicePlaylist servicePlaylist;
     private LecteurSimule lecteurSimule;
     private ServiceFiltre serviceFiltre;
+    private int pageActuelle = 1;
+    private final int taillePage = 25;
+    private ServicePagination servicePagination;
+
 
     @FXML
     public void initialize() {
@@ -65,6 +89,7 @@ public class MainController {
         serviceRecherche = new ServiceRecherche(bibliotheque);
         serviceFiltre = new ServiceFiltre(bibliotheque);
         lecteurSimule = new LecteurSimule(bibliotheque);
+        servicePagination = new ServicePagination();
 
         tableChansons.setItems(
                 FXCollections.observableArrayList(chansons)
@@ -93,16 +118,11 @@ public class MainController {
 
         comboTri.getItems().addAll(
                 "Titre",
-                "Artiste",
-                "Durée",
-                "Année",
-                "Écoutes"
+                "Artiste", "Durée", "Année", "Écoutes"
         );
 
         comboRecherche.getItems().addAll(
-                "Tous",
-                "Titre",
-                "Artiste"
+                "Tous", "Titre", "Artiste"
         );
 
         comboRecherche.getSelectionModel().selectFirst();
@@ -124,16 +144,13 @@ public class MainController {
         champRecherche.textProperty().addListener((observable, ancienTexte, nouveauTexte) -> {
 
             String choix = comboRecherche.getValue();
-
             List<Chanson> resultat = bibliotheque.getChansons().stream()
                     .filter(chanson -> {
-
                         if (choix.equals("Titre")) {
                             return chanson.getTitre()
                                     .toLowerCase()
                                     .contains(nouveauTexte.toLowerCase());
                         }
-
                         if (choix.equals("Artiste")) {
                             return chanson.getArtiste()
                                     .toLowerCase()
@@ -152,7 +169,7 @@ public class MainController {
             tableChansons.setItems(
                     FXCollections.observableArrayList(resultat)
             );
-            });
+        });
         listePlaylists.setOnMouseClicked(event -> {
             if (event.getClickCount() == 2) {
                 ouvrirPlaylist();
@@ -163,17 +180,14 @@ public class MainController {
     @FXML
     private void creerPlaylist() {
         TextInputDialog dialog = new TextInputDialog();
-
         dialog.setTitle("Nouvelle playlist");
         dialog.setHeaderText("Créer une playlist");
         dialog.setContentText("Nom :");
         dialog.showAndWait().ifPresent(nom -> {
             servicePlaylist.creerPlaylist(nom);
-
             listePlaylists.setItems(
                     FXCollections.observableArrayList(bibliotheque.getPlaylists())
             );
-
             listePlaylists.getSelectionModel().selectLast();
         });
     }
@@ -181,7 +195,6 @@ public class MainController {
     @FXML
     private void ajouterPlaylist() {
         Playlist playlist = listePlaylists.getSelectionModel().getSelectedItem();
-
         if (playlist == null) {
             return;
         }
@@ -193,27 +206,24 @@ public class MainController {
         tableChansons.setOnMouseClicked(event -> {
             if (event.getClickCount() == 2) {
                 Chanson chanson = tableChansons.getSelectionModel().getSelectedItem();
-
                 if (chanson != null) {
                     servicePlaylist.ajouterChanson(playlist, chanson);
 
                     tableChansons.setItems(
                             FXCollections.observableArrayList(playlist.getChansons())
                     );
-
                     tableChansons.setOnMouseClicked(null);
                 }
             }
         });
     }
+
     @FXML
     private void retirerPlaylist() {
         Playlist playlist = listePlaylists.getSelectionModel().getSelectedItem();
         Chanson chanson = tableChansons.getSelectionModel().getSelectedItem();
-
         if (playlist != null && chanson != null) {
             servicePlaylist.retirerChanson(playlist, chanson);
-
             tableChansons.setItems(
                     FXCollections.observableArrayList(playlist.getChansons())
             );
@@ -224,7 +234,6 @@ public class MainController {
     @FXML
     private void ouvrirPlaylist() {
         Playlist playlist = listePlaylists.getSelectionModel().getSelectedItem();
-
         if (playlist == null) {
             return;
         }
@@ -233,12 +242,9 @@ public class MainController {
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource("/playlist-view.fxml")
             );
-
             Parent root = loader.load();
-
             PlaylistController controller = loader.getController();
             controller.setPlaylist(playlist, servicePlaylist);
-
             Stage stage = new Stage();
             stage.setTitle(playlist.getNom());
             stage.setScene(new Scene(root));
@@ -282,9 +288,34 @@ public class MainController {
 
     private void afficherChanson() {
         Chanson chanson = lecteurSimule.getChansonActuelle();
-
         if (chanson != null) {
-            chansonActuelle.setText(chanson.getTitre() + " - " + chanson.getArtiste());
+            chansonActuelle.setText(
+                    chanson.getTitre() + " - " + chanson.getArtiste()
+            );
+            ecoutesChanson.setText(
+                    "Écoutes : " + chanson.getNbr_ecoute()
+            );
+            progressionChanson.setProgress(0);
+        }
+    }
+
+
+    @FXML
+    private void pageSuivante() {
+        int nombrePages = servicePagination.nombrePages(
+                bibliotheque.getChansons(), taillePage
+        );
+
+        if (pageActuelle < nombrePages) {pageActuelle++;
+            labelPage.setText("Page " + pageActuelle);
+        }
+    }
+
+    @FXML
+    private void pagePrecedente() {
+        if (pageActuelle > 1) {
+            pageActuelle--;
+            labelPage.setText("Page " + pageActuelle);
         }
     }
 
