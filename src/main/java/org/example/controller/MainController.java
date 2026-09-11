@@ -84,12 +84,10 @@ public class MainController {
         colGenre.setCellValueFactory(new PropertyValueFactory<>("genre"));
         colDuree.setCellValueFactory(new PropertyValueFactory<>("duree"));
         colEcoutes.setCellValueFactory(new PropertyValueFactory<>("nbr_ecoute"));
-
         LecteurCSV lecteur = new LecteurCSV("src/main/resources/data/chansons.csv");
         List<Chanson> chansons = lecteur.charger();
 
         bibliotheque = new Bibliotheque(chansons);
-
         servicePlaylist = new ServicePlaylist(bibliotheque);
         serviceRecherche = new ServiceRecherche(bibliotheque);
         serviceFiltre = new ServiceFiltre(bibliotheque);
@@ -117,7 +115,6 @@ public class MainController {
         );
         pageActuelle = 1;
         labelPage.setText("Page 1");
-
         listePlaylists.setCellFactory(liste -> new ListCell<>() {
             @Override
             protected void updateItem(Playlist playlist, boolean empty) {
@@ -134,20 +131,15 @@ public class MainController {
         for (Genre genre : Genre.values()) {
             comboGenre.getItems().add(genre.name());
         }
-
         comboGenre.getSelectionModel().selectFirst();
         comboTri.getItems().addAll(
                 "Titre",
                 "Artiste", "Durée", "Année", "Écoutes"
         );
-
         comboRecherche.getItems().addAll(
                 "Tous", "Titre", "Artiste"
         );
-
         comboRecherche.getSelectionModel().selectFirst();
-
-
         comboGenre.setOnAction(event -> {
             String choix = comboGenre.getValue();
 
@@ -195,6 +187,29 @@ public class MainController {
                 ouvrirPlaylist();
             }
         });
+        tableChansons.getSelectionModel().selectedItemProperty().addListener(
+                (observable, ancienneChanson, nouvelleChanson) -> {
+
+                    if (nouvelleChanson != null) {
+                        lecteurSimule.choisirChanson(nouvelleChanson);
+                        progressionChanson.setProgress(0);
+                        afficherChanson();
+                    }
+                }
+        );
+    }
+
+    @FXML
+    private void afficherBibliotheque() {
+        pageActuelle = 1;
+        List<Chanson> chansons = bibliotheque.getChansons();
+        int fin = Math.min(taillePage, chansons.size());
+        tableChansons.setItems(
+                FXCollections.observableArrayList(
+                        chansons.subList(0, fin)
+                )
+        );
+        labelPage.setText("Page 1");
     }
 
     @FXML
@@ -219,9 +234,16 @@ public class MainController {
             return;
         }
 
+        pageActuelle = 1;
+        List<Chanson> chansons = bibliotheque.getChansons();
+        int fin = Math.min(taillePage, chansons.size());
         tableChansons.setItems(
-                FXCollections.observableArrayList(bibliotheque.getChansons())
+                FXCollections.observableArrayList(
+                        chansons.subList(0, fin)
+                )
         );
+
+        labelPage.setText("Page 1");
 
         tableChansons.setOnMouseClicked(event -> {
             if (event.getClickCount() == 2) {
@@ -265,6 +287,7 @@ public class MainController {
             Parent root = loader.load();
             PlaylistController controller = loader.getController();
             controller.setPlaylist(playlist, servicePlaylist);
+            controller.setMainController(this);
             Stage stage = new Stage();
             stage.setTitle(playlist.getNom());
             stage.setScene(new Scene(root));
@@ -309,6 +332,11 @@ public class MainController {
         afficherChanson();
     }
 
+    public void selectionnerChanson(Chanson chanson) {
+        lecteurSimule.choisirChanson(chanson);
+        progressionChanson.setProgress(0);
+        afficherChanson();
+    }
     private void afficherChanson() {
         Chanson chanson = lecteurSimule.getChansonActuelle();
         if (chanson != null) {

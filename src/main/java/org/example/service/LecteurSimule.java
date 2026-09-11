@@ -102,5 +102,13 @@ public class LecteurSimule {
         }
         return chanson;
     }
+    public void choisirChanson(Chanson chanson) {
+        int index = bibliotheque.getChansons().indexOf(chanson);
+
+        if (index != -1) {
+            indexActuel = index;
+            tempsActuel = 0;
+        }
+    }
 
 }

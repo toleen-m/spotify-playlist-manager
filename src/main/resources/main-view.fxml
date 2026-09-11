@@ -46,6 +46,7 @@
 
     <right>
         <VBox spacing="10" styleClass="playlist-section">
+            <Button text="Bibliothèque" onAction="#afficherBibliotheque"/>
             <Label text="Playlists" styleClass="playlist-title"/>
             <ListView fx:id="listePlaylists"/>
             <Button text="Créer playlist" onAction="#creerPlaylist"/>

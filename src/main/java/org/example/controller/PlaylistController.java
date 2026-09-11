@@ -20,12 +20,21 @@ public class PlaylistController {
 
     private Playlist playlist;
     private ServicePlaylist servicePlaylist;
+    private MainController mainController;
 
     @FXML
     public void initialize() {
         colTitre.setCellValueFactory(new PropertyValueFactory<>("titre"));
         colArtiste.setCellValueFactory(new PropertyValueFactory<>("artiste"));
         colDuree.setCellValueFactory(new PropertyValueFactory<>("duree"));
+        tablePlaylist.getSelectionModel().selectedItemProperty().addListener(
+                (observable, ancienneChanson, nouvelleChanson) -> {
+
+                    if (nouvelleChanson != null && mainController != null) {
+                        mainController.selectionnerChanson(nouvelleChanson);
+                    }
+                }
+        );
     }
 
     public void setPlaylist(Playlist playlist, ServicePlaylist servicePlaylist) {
@@ -37,6 +46,10 @@ public class PlaylistController {
         tablePlaylist.setItems(
                 FXCollections.observableArrayList(playlist.getChansons())
         );
+    }
+
+    public void setMainController(MainController mainController) {
+        this.mainController = mainController;
     }
 
     @FXML
