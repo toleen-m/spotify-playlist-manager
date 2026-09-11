@@ -21,6 +21,11 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 import java.util.Comparator;
 import org.example.service.ServicePagination;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.util.Duration;
+
 
 public class MainController {
 
@@ -58,7 +63,7 @@ public class MainController {
     private Label ecoutesChanson;
     @FXML
     private Label labelPage;
-
+    private Timeline timeline;
 
     private ServiceRecherche serviceRecherche;
     private Bibliotheque bibliotheque;
@@ -89,6 +94,19 @@ public class MainController {
         serviceRecherche = new ServiceRecherche(bibliotheque);
         serviceFiltre = new ServiceFiltre(bibliotheque);
         lecteurSimule = new LecteurSimule(bibliotheque);
+        timeline = new Timeline(
+                new KeyFrame(
+                        Duration.seconds(1),
+                        event -> {
+                            lecteurSimule.avancerTemps(1);
+                            double progression = lecteurSimule.getProgression();
+                            progressionChanson.setProgress(progression);
+                            afficherChanson();
+                        }
+                )
+        );
+
+        timeline.setCycleCount(Animation.INDEFINITE);
         servicePagination = new ServicePagination();
 
         tableChansons.setItems(
@@ -99,7 +117,6 @@ public class MainController {
             @Override
             protected void updateItem(Playlist playlist, boolean empty) {
                 super.updateItem(playlist, empty);
-
                 if (empty || playlist == null) {
                     setText(null);
                 } else {
@@ -109,13 +126,11 @@ public class MainController {
         });
 
         comboGenre.getItems().add("Tous");
-
         for (Genre genre : Genre.values()) {
             comboGenre.getItems().add(genre.name());
         }
 
         comboGenre.getSelectionModel().selectFirst();
-
         comboTri.getItems().addAll(
                 "Titre",
                 "Artiste", "Durée", "Année", "Écoutes"
@@ -255,21 +270,22 @@ public class MainController {
         }
     }
 
-
     @FXML
     private void play() {
         lecteurSimule.play();
+        timeline.play();
         afficherChanson();
     }
 
     @FXML
     private void pause() {
         lecteurSimule.pause();
+        timeline.pause();
     }
-
     @FXML
     private void suivant() {
         lecteurSimule.suivant();
+        progressionChanson.setProgress(0);
         afficherChanson();
         tableChansons.refresh();
     }
@@ -277,12 +293,14 @@ public class MainController {
     @FXML
     private void precedent() {
         lecteurSimule.precedent();
+        progressionChanson.setProgress(0);
         afficherChanson();
     }
 
     @FXML
     private void shuffle() {
         lecteurSimule.shuffle();
+        progressionChanson.setProgress(0);
         afficherChanson();
     }
 
@@ -295,10 +313,8 @@ public class MainController {
             ecoutesChanson.setText(
                     "Écoutes : " + chanson.getNbr_ecoute()
             );
-            progressionChanson.setProgress(0);
         }
     }
-
 
     @FXML
     private void pageSuivante() {
@@ -306,7 +322,19 @@ public class MainController {
                 bibliotheque.getChansons(), taillePage
         );
 
-        if (pageActuelle < nombrePages) {pageActuelle++;
+        if (pageActuelle < nombrePages) {
+            pageActuelle++;
+            int debut = (pageActuelle - 1) * taillePage;
+            int fin = Math.min(
+                    debut + taillePage,
+                    bibliotheque.getChansons().size()
+            );
+            tableChansons.setItems(
+                    FXCollections.observableArrayList(
+                            bibliotheque.getChansons().subList(debut, fin)
+                    )
+            );
+
             labelPage.setText("Page " + pageActuelle);
         }
     }
@@ -315,8 +343,17 @@ public class MainController {
     private void pagePrecedente() {
         if (pageActuelle > 1) {
             pageActuelle--;
+            int debut = (pageActuelle - 1) * taillePage;
+            int fin = Math.min(
+                    debut + taillePage,
+                    bibliotheque.getChansons().size()
+            );
+            tableChansons.setItems(
+                    FXCollections.observableArrayList(
+                            bibliotheque.getChansons().subList(debut, fin)
+                    )
+            );
             labelPage.setText("Page " + pageActuelle);
         }
     }
-
 }
