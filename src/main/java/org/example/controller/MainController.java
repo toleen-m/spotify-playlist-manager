@@ -108,10 +108,15 @@ public class MainController {
 
         timeline.setCycleCount(Animation.INDEFINITE);
         servicePagination = new ServicePagination();
+        int fin = Math.min(taillePage, chansons.size());
 
         tableChansons.setItems(
-                FXCollections.observableArrayList(chansons)
+                FXCollections.observableArrayList(
+                        chansons.subList(0, fin)
+                )
         );
+        pageActuelle = 1;
+        labelPage.setText("Page 1");
 
         listePlaylists.setCellFactory(liste -> new ListCell<>() {
             @Override

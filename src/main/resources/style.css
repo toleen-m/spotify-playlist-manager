@@ -119,3 +119,34 @@
     -fx-background-color: #efb4ce;
     -fx-background-radius: 5;
 }}
+
+.pagination {
+    -fx-padding: 8px;
+}
+
+.pagination .button {
+    -fx-padding: 5px 12px;
+}
+
+.pagination .label {
+    -fx-font-weight: bold;
+}
+
+.playlist-section {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+    -fx-pref-width: 230px;
+}
+
+.playlist-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.playlist-section .list-view {
+    -fx-pref-height: 250px;
+}
+
+.playlist-section .button {
+    -fx-padding: 6px 10px;
+}

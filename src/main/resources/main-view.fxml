@@ -3,7 +3,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <BorderPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="org.example.controller.MainController"
             stylesheets="@style.css">
@@ -19,6 +18,7 @@
             </HBox>
         </VBox>
     </top>
+
     <center>
         <VBox>
 
@@ -34,7 +34,7 @@
                 </columns>
             </TableView>
 
-            <HBox spacing="10">
+            <HBox spacing="8" alignment="CENTER" styleClass="pagination">
                 <Button text="←" onAction="#pagePrecedente"/>
                 <Label fx:id="labelPage" text="Page 1"/>
                 <Button text="→" onAction="#pageSuivante"/>
@@ -43,21 +43,25 @@
         </VBox>
     </center>
 
+
     <right>
-        <VBox>
-            <Label text="Playlists"/>
-            <ListView fx:id="listePlaylists" onMouseClicked="#ouvrirPlaylist"/>
-            <Button text="Créer" onAction="#creerPlaylist"/>
-            <Button text="Ajouter" onAction="#ajouterPlaylist"/>
-            <Button text="Retirer" onAction="#retirerPlaylist"/>
+        <VBox spacing="10" styleClass="playlist-section">
+            <Label text="Playlists" styleClass="playlist-title"/>
+            <ListView fx:id="listePlaylists"/>
+            <Button text="Créer playlist" onAction="#creerPlaylist"/>
+            <Button text="Ajouter chanson" onAction="#ajouterPlaylist"/>
+            <Button text="Retirer chanson" onAction="#retirerPlaylist"/>
         </VBox>
     </right>
+
+
     <bottom>
         <VBox spacing="5">
 
             <Label fx:id="chansonActuelle" text="Aucune chanson"/>
             <ProgressBar fx:id="progressionChanson" progress="0" prefWidth="300"/>
             <Label fx:id="ecoutesChanson" text="Écoutes : 0"/>
+
             <HBox>
                 <Button text="Previous" onAction="#precedent"/>
                 <Button text="Play" onAction="#play"/>
