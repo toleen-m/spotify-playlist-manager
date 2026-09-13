@@ -23,17 +23,6 @@ public class Bibliotheque {
     }
 
 
-    public boolean ajouterChanson(Chanson chanson){
-        for (Chanson c : chansons){
-            if (c.getId() == chanson.getId()){
-                return false;
-            }
-        }
-
-        chansons.add(chanson);
-        return true;
-    }
-
     public boolean ajouterPlaylist(Playlist playlist){
         for (Playlist p : playlists){
             if(p.getId() == playlist.getId()){
