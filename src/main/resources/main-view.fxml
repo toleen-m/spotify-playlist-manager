@@ -15,6 +15,7 @@
                 <ComboBox fx:id="comboRecherche" promptText="Rechercher par"/>
                 <ComboBox fx:id="comboGenre" promptText="Genre"/>
                 <ComboBox fx:id="comboTri" promptText="Trier"/>
+                <Button text="Lancer tri" onAction="#lancerTri"/>
             </HBox>
         </VBox>
     </top>

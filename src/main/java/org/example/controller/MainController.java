@@ -25,6 +25,10 @@ import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.util.Duration;
+import org.example.model.ResultatTri;
+import org.example.model.ResultatBenchmark;
+import org.example.service.ServiceTri;
+import org.example.service.ServiceBenchmark;
 
 
 public class MainController {
@@ -73,7 +77,8 @@ public class MainController {
     private int pageActuelle = 1;
     private final int taillePage = 25;
     private ServicePagination servicePagination;
-
+    private ServiceTri serviceTri;
+    private ServiceBenchmark serviceBenchmark;
 
     @FXML
     public void initialize() {
@@ -91,6 +96,8 @@ public class MainController {
         servicePlaylist = new ServicePlaylist(bibliotheque);
         serviceRecherche = new ServiceRecherche(bibliotheque);
         serviceFiltre = new ServiceFiltre(bibliotheque);
+        serviceTri = new ServiceTri();
+        serviceBenchmark = new ServiceBenchmark();
         lecteurSimule = new LecteurSimule(bibliotheque);
         timeline = new Timeline(
                 new KeyFrame(
@@ -134,7 +141,7 @@ public class MainController {
         comboGenre.getSelectionModel().selectFirst();
         comboTri.getItems().addAll(
                 "Titre",
-                "Artiste", "Durée", "Année", "Écoutes"
+                "Artiste", "Durée", "Année", "Écoutes", "Genre"
         );
         comboRecherche.getItems().addAll(
                 "Tous", "Titre", "Artiste"
@@ -286,6 +293,42 @@ public class MainController {
             );
         }
     }
+
+        @FXML
+        private void lancerTri() {
+            String choix = comboTri.getValue();
+
+            if (choix == null) return;
+
+            Comparator<Chanson> comparateur = null;
+
+            if (choix.equals("Titre")) {
+                comparateur = serviceTri.parTitre();
+            } else if (choix.equals("Artiste")) {
+                comparateur = serviceTri.parArtiste();
+            } else if (choix.equals("Durée")) {
+                comparateur = serviceTri.parDuree();
+            } else if (choix.equals("Année")) {
+                comparateur = serviceTri.parAnnee();
+            } else if (choix.equals("Écoutes")) {
+                comparateur = serviceTri.parEcoutes();
+            } else if (choix.equals("Genre")) {
+                comparateur = serviceTri.parGenre();
+            }
+
+            List<ResultatTri> resultats =
+                    serviceTri.trierAvecLesTroisAlgorithmes(
+                            bibliotheque.getChansons(),
+                            comparateur
+                    );
+
+            ResultatTri gagnant = serviceTri.trouverLePlusRapide(resultats);
+
+            tableChansons.setItems(
+                    FXCollections.observableArrayList(gagnant.getChansons())
+            );
+        }
+
 
     @FXML
     private void ouvrirPlaylist() {
