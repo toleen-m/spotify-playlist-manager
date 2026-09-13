@@ -77,6 +77,7 @@ public class MainController {
     private int pageActuelle = 1;
     private final int taillePage = 25;
     private ServicePagination servicePagination;
+    private List<Chanson> chansonsAffichees;
     private ServiceTri serviceTri;
     private ServiceBenchmark serviceBenchmark;
 
@@ -113,15 +114,9 @@ public class MainController {
 
         timeline.setCycleCount(Animation.INDEFINITE);
         servicePagination = new ServicePagination();
-        int fin = Math.min(taillePage, chansons.size());
-
-        tableChansons.setItems(
-                FXCollections.observableArrayList(
-                        chansons.subList(0, fin)
-                )
-        );
+        chansonsAffichees = bibliotheque.getChansons();
         pageActuelle = 1;
-        labelPage.setText("Page 1");
+        afficherPage();
         listePlaylists.setCellFactory(liste -> new ListCell<>() {
             @Override
             protected void updateItem(Playlist playlist, boolean empty) {
@@ -404,6 +399,19 @@ public class MainController {
                     "Écoutes : " + chanson.getNbr_ecoute()
             );
         }
+    }
+
+    private void afficherPage() {
+        int debut = (pageActuelle - 1) * taillePage;
+        int fin = Math.min(debut + taillePage, chansonsAffichees.size());
+
+        tableChansons.setItems(
+                FXCollections.observableArrayList(
+                        chansonsAffichees.subList(debut, fin)
+                )
+        );
+
+        labelPage.setText("Page " + pageActuelle);
     }
 
     @FXML
