@@ -66,7 +66,13 @@ public class MainController {
     @FXML
     private Label ecoutesChanson;
     @FXML
+    private Slider sliderDuree;
+    @FXML
     private Label labelPage;
+    @FXML
+    private Slider sliderEcoutes;
+    @FXML
+    private Label labelGagnant;
     private Timeline timeline;
 
     private ServiceRecherche serviceRecherche;
@@ -143,20 +149,18 @@ public class MainController {
         );
         comboRecherche.getSelectionModel().selectFirst();
         comboGenre.setOnAction(event -> {
-            String choix = comboGenre.getValue();
-
-            if (choix.equals("Tous")) {
-                tableChansons.setItems(FXCollections.observableArrayList(bibliotheque.getChansons()));
-            } else {
-                Genre genre = Genre.valueOf(choix);
-
-                tableChansons.setItems(FXCollections.observableArrayList(
-                        serviceFiltre.filtrerChansons(genre, null, null, null)
-                ));
-            }
+            appliquerFiltres();
         });
-        champRecherche.textProperty().addListener((observable, ancienTexte, nouveauTexte) -> {
 
+        sliderDuree.valueProperty().addListener((observable, ancienneValeur, nouvelleValeur) -> {
+            appliquerFiltres();
+        });
+
+        sliderEcoutes.valueProperty().addListener((observable, ancienneValeur, nouvelleValeur) -> {
+            appliquerFiltres();
+        });
+
+        champRecherche.textProperty().addListener((observable, ancienTexte, nouveauTexte) -> {
             String choix = comboRecherche.getValue();
             List<Chanson> resultat = bibliotheque.getChansons().stream()
                     .filter(chanson -> {
@@ -318,12 +322,33 @@ public class MainController {
                     );
 
             ResultatTri gagnant = serviceTri.trouverLePlusRapide(resultats);
-
+            labelGagnant.setText("Gagnant : " + gagnant.getNomAlgorithme());
             tableChansons.setItems(
                     FXCollections.observableArrayList(gagnant.getChansons())
             );
         }
+    @FXML
+    private void afficherBenchmark() {
+        Comparator<Chanson> comparateur = serviceTri.parTitre();
+        List<ResultatTri> tris = serviceTri.trierAvecLesTroisAlgorithmes(
+                bibliotheque.getChansons(),
+                comparateur
+        );
 
+        List<ResultatBenchmark> resultats =
+                serviceBenchmark.obtenirResultatsBenchmark(tris);
+        String texte = "";
+        for (ResultatBenchmark resultat : resultats) {
+            texte += resultat.getNomAlgorithme()
+                    + " : "
+                    + resultat.getTempsMillisecondes()
+                    + " ms\n";
+        }
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Benchmark");
+        alert.setContentText(texte);
+        alert.show();
+    }
 
     @FXML
     private void ouvrirPlaylist() {
@@ -416,42 +441,39 @@ public class MainController {
 
     @FXML
     private void pageSuivante() {
-        int nombrePages = servicePagination.nombrePages(
-                bibliotheque.getChansons(), taillePage
-        );
 
+        int nombrePages = servicePagination.nombrePages(
+                chansonsAffichees, taillePage
+        );
         if (pageActuelle < nombrePages) {
             pageActuelle++;
-            int debut = (pageActuelle - 1) * taillePage;
-            int fin = Math.min(
-                    debut + taillePage,
-                    bibliotheque.getChansons().size()
-            );
-            tableChansons.setItems(
-                    FXCollections.observableArrayList(
-                            bibliotheque.getChansons().subList(debut, fin)
-                    )
-            );
+            afficherPage();
+        }
+    }
+    @FXML
+    private void pagePrecedente() {
 
-            labelPage.setText("Page " + pageActuelle);
+        if (pageActuelle > 1) {
+            pageActuelle--;
+            afficherPage();
         }
     }
 
-    @FXML
-    private void pagePrecedente() {
-        if (pageActuelle > 1) {
-            pageActuelle--;
-            int debut = (pageActuelle - 1) * taillePage;
-            int fin = Math.min(
-                    debut + taillePage,
-                    bibliotheque.getChansons().size()
-            );
-            tableChansons.setItems(
-                    FXCollections.observableArrayList(
-                            bibliotheque.getChansons().subList(debut, fin)
-                    )
-            );
-            labelPage.setText("Page " + pageActuelle);
+    private void appliquerFiltres() {
+        Genre genre = null;
+        if (!comboGenre.getValue().equals("Tous")) {
+            genre = Genre.valueOf(comboGenre.getValue());
         }
+        int dureeMax = (int) sliderDuree.getValue();
+        int ecoutesMin = (int) sliderEcoutes.getValue();
+        chansonsAffichees = serviceFiltre.filtrerChansons(
+                genre,
+                dureeMax,
+                ecoutesMin,
+                null
+        );
+
+        pageActuelle = 1;
+        afficherPage();
     }
 }

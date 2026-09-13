@@ -12,10 +12,25 @@
             <Label text="Spotify Playlist Manager"/>
             <HBox>
                 <TextField fx:id="champRecherche" promptText="Rechercher..."/>
-                <ComboBox fx:id="comboRecherche" promptText="Rechercher par"/>
-                <ComboBox fx:id="comboGenre" promptText="Genre"/>
-                <ComboBox fx:id="comboTri" promptText="Trier"/>
+                <VBox>
+                    <Label text="Recherche"/>
+                    <ComboBox fx:id="comboRecherche" promptText="Rechercher par"/>
+                </VBox>
+                <VBox>
+                    <Label text="Filtres"/>
+                    <ComboBox fx:id="comboGenre" promptText="Genre"/>
+                    <Label text="Durée max"/>
+                    <Slider fx:id="sliderDuree" min="0" max="400" value="400"/>
+                    <Label text="Écoutes min"/>
+                    <Slider fx:id="sliderEcoutes" min="0" max="500000" value="0"/>
+                </VBox>
+                <VBox>
+                    <Label text="Tri"/>
+                    <ComboBox fx:id="comboTri" promptText="Trier"/>
+                </VBox>
                 <Button text="Lancer tri" onAction="#lancerTri"/>
+                <Button text="Benchmark" onAction="#afficherBenchmark"/>
+                <Label fx:id="labelGagnant" text=""/>
             </HBox>
         </VBox>
     </top>
