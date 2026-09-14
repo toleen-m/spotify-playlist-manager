@@ -13,6 +13,8 @@ import org.example.service.ServicePlaylist;
 public class PlaylistController {
 
     @FXML private Label nomPlaylist;
+    @FXML private Label labelDureeTotale;
+
     @FXML private TableView<Chanson> tablePlaylist;
     @FXML private TableColumn<Chanson, String> colTitre;
     @FXML private TableColumn<Chanson, String> colArtiste;
@@ -29,7 +31,6 @@ public class PlaylistController {
         colDuree.setCellValueFactory(new PropertyValueFactory<>("duree"));
         tablePlaylist.getSelectionModel().selectedItemProperty().addListener(
                 (observable, ancienneChanson, nouvelleChanson) -> {
-
                     if (nouvelleChanson != null && mainController != null) {
                         mainController.selectionnerChanson(nouvelleChanson);
                     }
@@ -40,28 +41,59 @@ public class PlaylistController {
     public void setPlaylist(Playlist playlist, ServicePlaylist servicePlaylist) {
         this.playlist = playlist;
         this.servicePlaylist = servicePlaylist;
-
         nomPlaylist.setText(playlist.getNom());
-
-        tablePlaylist.setItems(
-                FXCollections.observableArrayList(playlist.getChansons())
-        );
+        rafraichirPlaylist();
     }
 
     public void setMainController(MainController mainController) {
         this.mainController = mainController;
     }
+    private void rafraichirPlaylist() {
+        tablePlaylist.setItems(
+                FXCollections.observableArrayList(playlist.getChansons())
+        );
+        labelDureeTotale.setText(
+                "Durée totale : " + playlist.getDureeTotale() + " s"
+        );
+    }
 
     @FXML
     private void retirerChanson() {
         Chanson chanson = tablePlaylist.getSelectionModel().getSelectedItem();
-
         if (chanson != null) {
             servicePlaylist.retirerChanson(playlist, chanson);
+            rafraichirPlaylist();
+        }
+    }
 
-            tablePlaylist.setItems(
-                    FXCollections.observableArrayList(playlist.getChansons())
-            );
+    @FXML
+    private void viderPlaylist() {
+        servicePlaylist.viderPlaylist(playlist);
+        rafraichirPlaylist();
+    }
+
+    @FXML
+    private void monterChanson() {
+        int index = tablePlaylist.getSelectionModel().getSelectedIndex();
+        if (index >= 0) {
+            playlist.deplacerVersLeHaut(index);
+            rafraichirPlaylist();
+            if (index > 0) {
+                tablePlaylist.getSelectionModel().select(index - 1);
+            }
+        }
+    }
+
+    @FXML
+    private void descendreChanson() {
+        int index = tablePlaylist.getSelectionModel().getSelectedIndex();
+
+        if (index >= 0) {
+            playlist.deplacerVersLeBas(index);
+            rafraichirPlaylist();
+            if (index < playlist.getChansons().size() - 1) {
+                tablePlaylist.getSelectionModel().select(index + 1);
+            }
         }
     }
 }

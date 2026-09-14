@@ -10,6 +10,8 @@
 
     <Label fx:id="nomPlaylist" text="Playlist"/>
 
+    <Label fx:id="labelDureeTotale" text="Durée totale : 0 s"/>
+
     <TableView fx:id="tablePlaylist">
         <columns>
             <TableColumn fx:id="colTitre" text="Titre"/>
@@ -18,6 +20,11 @@
         </columns>
     </TableView>
 
-    <Button text="Retirer" onAction="#retirerChanson"/>
+    <HBox spacing="10">
+        <Button text="Retirer" onAction="#retirerChanson"/>
+        <Button text="Monter" onAction="#monterChanson"/>
+        <Button text="Descendre" onAction="#descendreChanson"/>
+        <Button text="Vider" onAction="#viderPlaylist"/>
+    </HBox>
 
 </VBox>
