@@ -62,6 +62,7 @@ Le projet permet de consulter une bibliothèque de chansons, effectuer des reche
 
 - Recherche insensible aux accents — manque de temps
 - Aucun bonus n'a été implémenté
+- Faire le filtre, le tri et recherche sur la list des chansons dans une playlist
 
 ---
 
@@ -69,6 +70,11 @@ Le projet permet de consulter une bibliothèque de chansons, effectuer des reche
 
 ```
 
+├── screenshots/
+│    ├── principal.png
+|    ├── playlist.png
+|    └── benchmark.png 
+|   
 ├── pom.xml
 ├── src/ 
   └── main/ 
@@ -200,18 +206,20 @@ La solution utilisée a été de lancer le projet avec Maven et le plugin JavaFX
 
 ## Notes pour le correcteur
 
-[A COMPLETER (optionnel) : commentaires utiles pour le correcteur, ex. "Le benchmark est accessible via le menu Outils > Comparer les tris"]
+- Le benchmark est accessible via le bouton benchmark
+- Pour ajouter une chanson dans un playlist: il faut clicker la playlist puis clicker le bouton `Ajouter chanson` apres, double clicler la chanson et reclicker le bouton `Ajouter chanson`
+- Pour voir la list des chansons d'une playlist: double clicker le nom du playlist
 
 ---
 
 ## Captures d'écran (fortement recommandé)
 
-[A COMPLETER (fortement recommandé) : mettre 2-3 captures d'écran de l'application dans un dossier `screenshots/` du dépôt et les référencer ici]
-
-Exemple :
 ```markdown
 ### Écran principal
 ![Écran principal](screenshots/principal.png)
+
+### Écran de playlist
+![Playlist](screenshots/playlist.png)
 
 ### Écran de benchmark
 ![Benchmark](screenshots/benchmark.png)
@@ -221,7 +229,7 @@ Exemple :
 
 ## Historique Git
 
-**Nombre total de commits** : [A COMPLETER : ex. 47]
+**Nombre total de commits** : 32
 **Date du premier commit** : Sep 7, 2026
 **Date du dernier commit** : Sep 13, 2026
 
