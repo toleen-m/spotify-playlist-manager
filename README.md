@@ -229,7 +229,7 @@ La solution utilisée a été de lancer le projet avec Maven et le plugin JavaFX
 
 ## Historique Git
 
-**Nombre total de commits** : 32
+**Nombre total de commits** : 34
 **Date du premier commit** : Sep 7, 2026
 **Date du dernier commit** : Sep 13, 2026
 
