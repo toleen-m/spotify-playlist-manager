@@ -214,7 +214,7 @@ La solution utilisée a été de lancer le projet avec Maven et le plugin JavaFX
 
 ## Captures d'écran (fortement recommandé)
 
-```markdown
+
 ### Écran principal
 ![Écran principal](screenshots/principal.png)
 
@@ -223,7 +223,7 @@ La solution utilisée a été de lancer le projet avec Maven et le plugin JavaFX
 
 ### Écran de benchmark
 ![Benchmark](screenshots/benchmark.png)
-```
+
 
 ---
 
