@@ -58,6 +58,10 @@ public class Chanson {
         this.nbr_ecoute = nbr_ecoute;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public void incrementerEcoutes(){
         nbr_ecoute++;
     }
