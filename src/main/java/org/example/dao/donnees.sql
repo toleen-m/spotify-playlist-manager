@@ -4,7 +4,7 @@ VALUES (1,'Blinding Lights','The Weeknd','Album 1 - The Weeknd',1977,'RNB',231,2
 
 INSERT INTO chanson
 (id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
-VALUES (2,'Save Your Tears','The Weeknd','Album 2 - The Weeknd',2002,'RNB',315,451387)
+VALUES (2,'Save Your Tears','The Weeknd','Album 2 - The Weeknd',2002,'RNB',315,451387);
 
 INSERT INTO chanson
 (id, titre, artiste, album, annee, genre, duree, nbr_ecoute)

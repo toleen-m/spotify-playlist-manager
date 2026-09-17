@@ -9,7 +9,7 @@ import org.example.model.Chanson;
 import org.example.model.Playlist;
 import org.example.service.LecteurSimule;
 import org.example.service.ServicePlaylist;
-import org.example.util.LecteurCSV;
+import org.example.util.LecteurBD;
 import org.example.service.ServiceRecherche;
 import java.util.List;
 import org.example.model.Genre;
@@ -96,7 +96,7 @@ public class MainController {
         colGenre.setCellValueFactory(new PropertyValueFactory<>("genre"));
         colDuree.setCellValueFactory(new PropertyValueFactory<>("duree"));
         colEcoutes.setCellValueFactory(new PropertyValueFactory<>("nbr_ecoute"));
-        LecteurCSV lecteur = new LecteurCSV("src/main/resources/data/chansons.csv");
+        LecteurBD lecteur = new LecteurBD();
         List<Chanson> chansons = lecteur.charger();
 
         bibliotheque = new Bibliotheque(chansons);
