@@ -1,0 +1,1599 @@
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (1,'Blinding Lights','The Weeknd','Album 1 - The Weeknd',1977,'RNB',231,263962);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (2,'Save Your Tears','The Weeknd','Album 2 - The Weeknd',2002,'RNB',315,451387)
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (3,'Starboy','The Weeknd','Album 3 - The Weeknd',1976,'RNB',207,469636);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (4,'The Hills','The Weeknd','Album 4 - The Weeknd',2008,'RNB',309,292297);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (5,'After Hours','The Weeknd','Album 5 - The Weeknd',1996,'RNB',350,300690);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (6,'Die For You','The Weeknd','Album 6 - The Weeknd',2005,'RNB',337,407646);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (7,'In Your Eyes','The Weeknd','Album 7 - The Weeknd',2019,'RNB',275,394253);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (8,'Earned It','The Weeknd','Album 8 - The Weeknd',2019,'RNB',300,231760);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (9,'Call Out My Name','The Weeknd','Album 9 - The Weeknd',1985,'RNB',150,322519);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (10,'Out of Time','The Weeknd','Album 10 - The Weeknd',1975,'RNB',178,151096);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (11,'Billie Jean','Michael Jackson','Album 1 - Michael Jackson',2022,'POP',175,236248);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (12,'Beat It','Michael Jackson','Album 2 - Michael Jackson',1970,'POP',358,467621);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (13,'Thriller','Michael Jackson','Album 3 - Michael Jackson',2013,'POP',275,356695);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (14,'Smooth Criminal','Michael Jackson','Album 4 - Michael Jackson',1990,'POP',203,208756);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (15,'Man in the Mirror','Michael Jackson','Album 5 - Michael Jackson',1986,'POP',239,487729);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (16,'Black or White','Michael Jackson','Album 6 - Michael Jackson',1992,'POP',356,197812);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (17,'Bad','Michael Jackson','Album 7 - Michael Jackson',2017,'POP',281,334847);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (18,'Earth Song','Michael Jackson','Album 8 - Michael Jackson',1974,'POP',335,178964);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (19,'Human Nature','Michael Jackson','Album 9 - Michael Jackson',1975,'POP',292,282600);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (20,'Rock with You','Michael Jackson','Album 10 - Michael Jackson',1988,'POP',223,240334);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (21,'Smells Like Teen Spirit','Nirvana','Album 1 - Nirvana',1979,'ROCK',315,369585);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (22,'Come as You Are','Nirvana','Album 2 - Nirvana',2015,'ROCK',297,162504);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (23,'Heart-Shaped Box','Nirvana','Album 3 - Nirvana',1971,'ROCK',331,193880);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (24,'Lithium','Nirvana','Album 4 - Nirvana',1993,'ROCK',268,221863);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (25,'In Bloom','Nirvana','Album 5 - Nirvana',1975,'ROCK',252,467624);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (26,'All Apologies','Nirvana','Album 6 - Nirvana',2007,'ROCK',291,261834);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (27,'About a Girl','Nirvana','Album 7 - Nirvana',2025,'ROCK',179,223554);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (28,'Polly','Nirvana','Album 8 - Nirvana',2002,'ROCK',355,393792);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (29,'Drain You','Nirvana','Album 9 - Nirvana',2025,'ROCK',303,459479);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (30,'Something in the Way','Nirvana','Album 10 - Nirvana',2001,'ROCK',251,481143);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (31,'Get Lucky','Daft Punk','Album 1 - Daft Punk',2003,'ELECTRONIC',216,443249);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (32,'One More Time','Daft Punk','Album 2 - Daft Punk',1996,'ELECTRONIC',294,486112);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (33,'Harder Better Faster Stronger','Daft Punk','Album 3 - Daft Punk',2000,'ELECTRONIC',281,272074);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (34,'Around the World','Daft Punk','Album 4 - Daft Punk',2021,'ELECTRONIC',156,302236);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (35,'Digital Love','Daft Punk','Album 5 - Daft Punk',1984,'ELECTRONIC',346,68132);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (36,'Instant Crush','Daft Punk','Album 6 - Daft Punk',2022,'ELECTRONIC',162,369946);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (37,'Lose Yourself to Dance','Daft Punk','Album 7 - Daft Punk',2003,'ELECTRONIC',321,54279);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (38,'Aerodynamic','Daft Punk','Album 8 - Daft Punk',2015,'ELECTRONIC',309,225634);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (39,'Technologic','Daft Punk','Album 9 - Daft Punk',2000,'ELECTRONIC',186,253266);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (40,'Something About Us','Daft Punk','Album 10 - Daft Punk',1984,'ELECTRONIC',181,329055);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (41,'Lose Yourself','Eminem','Album 1 - Eminem',2014,'HIPHOP',266,354029);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (42,'Stan','Eminem','Album 2 - Eminem',2000,'HIPHOP',332,487807);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (43,'Without Me','Eminem','Album 3 - Eminem',2004,'HIPHOP',214,293994);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (44,'The Real Slim Shady','Eminem','Album 4 - Eminem',1995,'HIPHOP',321,161785);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (45,'Not Afraid','Eminem','Album 5 - Eminem',2005,'HIPHOP',354,339642);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (46,'Mockingbird','Eminem','Album 6 - Eminem',2002,'HIPHOP',328,251577);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (47,'Rap God','Eminem','Album 7 - Eminem',2021,'HIPHOP',252,227551);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (48,'Love the Way You Lie','Eminem','Album 8 - Eminem',1982,'HIPHOP',225,436624);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (49,'My Name Is','Eminem','Album 9 - Eminem',1987,'HIPHOP',152,17858);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (50,'Cleanin Out My Closet','Eminem','Album 10 - Eminem',1979,'HIPHOP',317,462943);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (51,'Hotel California','Eagles','Album 1 - Eagles',2008,'COUNTRY',267,421790);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (52,'Take It Easy','Eagles','Album 2 - Eagles',2003,'COUNTRY',275,189210);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (53,'Desperado','Eagles','Album 3 - Eagles',1982,'COUNTRY',216,363646);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (54,'One of These Nights','Eagles','Album 4 - Eagles',2001,'COUNTRY',269,268551);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (55,'New Kid in Town','Eagles','Album 5 - Eagles',2019,'COUNTRY',277,424103);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (56,'Life in the Fast Lane','Eagles','Album 6 - Eagles',1997,'COUNTRY',292,348573);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (57,'Tequila Sunrise','Eagles','Album 7 - Eagles',1972,'COUNTRY',224,166519);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (58,'Already Gone','Eagles','Album 8 - Eagles',1999,'COUNTRY',357,52076);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (59,'Lyin Eyes','Eagles','Album 9 - Eagles',1998,'COUNTRY',326,376162);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (60,'Peaceful Easy Feeling','Eagles','Album 10 - Eagles',2020,'COUNTRY',281,136202);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (61,'Shape of You','Ed Sheeran','Album 1 - Ed Sheeran',1998,'POP',196,223729);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (62,'Perfect','Ed Sheeran','Album 2 - Ed Sheeran',2023,'POP',336,251710);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (63,'Thinking Out Loud','Ed Sheeran','Album 3 - Ed Sheeran',1974,'POP',316,140204);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (64,'Photograph','Ed Sheeran','Album 4 - Ed Sheeran',2001,'POP',244,51179);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (65,'Castle on the Hill','Ed Sheeran','Album 5 - Ed Sheeran',1982,'POP',341,449624);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (66,'Bad Habits','Ed Sheeran','Album 6 - Ed Sheeran',1996,'POP',187,236112);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (67,'Shivers','Ed Sheeran','Album 7 - Ed Sheeran',1970,'POP',173,612);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (68,'The A Team','Ed Sheeran','Album 8 - Ed Sheeran',1998,'POP',298,287070);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (69,'Galway Girl','Ed Sheeran','Album 9 - Ed Sheeran',2023,'POP',171,320385);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (70,'Happier','Ed Sheeran','Album 10 - Ed Sheeran',2020,'POP',200,130438);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (71,'Enter Sandman','Metallica','Album 1 - Metallica',1977,'METAL',308,23914);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (72,'Nothing Else Matters','Metallica','Album 2 - Metallica',2018,'METAL',289,141290);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (73,'Master of Puppets','Metallica','Album 3 - Metallica',2012,'METAL',343,333637);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (74,'One','Metallica','Album 4 - Metallica',1992,'METAL',189,3190);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (75,'The Unforgiven','Metallica','Album 5 - Metallica',1990,'METAL',320,306194);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (76,'Fade to Black','Metallica','Album 6 - Metallica',2006,'METAL',346,486097);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (77,'Seek and Destroy','Metallica','Album 7 - Metallica',2025,'METAL',275,362131);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (78,'For Whom the Bell Tolls','Metallica','Album 8 - Metallica',2016,'METAL',184,286658);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (79,'Sad but True','Metallica','Album 9 - Metallica',1984,'METAL',271,308747);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (80,'Fuel','Metallica','Album 10 - Metallica',1978,'METAL',303,459773);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (81,'Hello','Adele','Album 1 - Adele',2014,'POP',279,152900);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (82,'Someone Like You','Adele','Album 2 - Adele',1975,'POP',256,351015);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (83,'Rolling in the Deep','Adele','Album 3 - Adele',1980,'POP',184,411247);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (84,'Easy on Me','Adele','Album 4 - Adele',2020,'POP',300,160934);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (85,'Set Fire to the Rain','Adele','Album 5 - Adele',2002,'POP',255,205185);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (86,'When We Were Young','Adele','Album 6 - Adele',2021,'POP',188,273145);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (87,'Skyfall','Adele','Album 7 - Adele',2021,'POP',200,197635);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (88,'Send My Love','Adele','Album 8 - Adele',1970,'POP',177,204630);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (89,'Hometown Glory','Adele','Album 9 - Adele',1974,'POP',163,437651);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (90,'Chasing Pavements','Adele','Album 10 - Adele',1992,'POP',315,185784);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (91,'Bohemian Rhapsody','Queen','Album 1 - Queen',2019,'ROCK',156,13912);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (92,'We Will Rock You','Queen','Album 2 - Queen',2002,'ROCK',271,172340);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (93,'We Are the Champions','Queen','Album 3 - Queen',2013,'ROCK',227,236503);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (94,'Another One Bites the Dust','Queen','Album 4 - Queen',1990,'ROCK',181,261369);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (95,'Somebody to Love','Queen','Album 5 - Queen',1999,'ROCK',296,324827);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (96,'Dont Stop Me Now','Queen','Album 6 - Queen',2021,'ROCK',193,81182);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (97,'Under Pressure','Queen','Album 7 - Queen',2007,'ROCK',283,109020);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (98,'Killer Queen','Queen','Album 8 - Queen',1997,'ROCK',309,176880);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (99,'Radio Ga Ga','Queen','Album 9 - Queen',1999,'ROCK',303,122830);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (100,'Crazy Little Thing Called Love','Queen','Album 10 - Queen',2013,'ROCK',331,36942);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (101,'Yellow','Coldplay','Album 1 - Coldplay',2005,'ROCK',252,18405);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (102,'Fix You','Coldplay','Album 2 - Coldplay',1982,'ROCK',315,483608);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (103,'Viva la Vida','Coldplay','Album 3 - Coldplay',1981,'ROCK',161,340359);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (104,'The Scientist','Coldplay','Album 4 - Coldplay',2004,'ROCK',162,237384);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (105,'Clocks','Coldplay','Album 5 - Coldplay',2025,'ROCK',343,336491);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (106,'Paradise','Coldplay','Album 6 - Coldplay',1982,'ROCK',273,373240);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (107,'A Sky Full of Stars','Coldplay','Album 7 - Coldplay',2013,'ROCK',155,68206);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (108,'Adventure of a Lifetime','Coldplay','Album 8 - Coldplay',2011,'ROCK',285,115174);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (109,'In My Place','Coldplay','Album 9 - Coldplay',2020,'ROCK',282,469536);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (110,'Hymn for the Weekend','Coldplay','Album 10 - Coldplay',1978,'ROCK',191,347171);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (111,'Gods Plan','Drake','Album 1 - Drake',2024,'HIPHOP',197,204957);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (112,'Hotline Bling','Drake','Album 2 - Drake',1987,'HIPHOP',258,279951);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (113,'One Dance','Drake','Album 3 - Drake',1996,'HIPHOP',170,201399);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (114,'Passionfruit','Drake','Album 4 - Drake',1989,'HIPHOP',197,180889);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (115,'Started From the Bottom','Drake','Album 5 - Drake',1981,'HIPHOP',217,243725);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (116,'In My Feelings','Drake','Album 6 - Drake',2001,'HIPHOP',349,427791);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (117,'Marvins Room','Drake','Album 7 - Drake',1996,'HIPHOP',223,245709);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (118,'Nice for What','Drake','Album 8 - Drake',1981,'HIPHOP',233,272781);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (119,'Hold On Were Going Home','Drake','Album 9 - Drake',2000,'HIPHOP',263,63469);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (120,'Take Care','Drake','Album 10 - Drake',2003,'HIPHOP',353,275593);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (121,'Love Story','Taylor Swift','Album 1 - Taylor Swift',2020,'POP',220,428398);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (122,'Blank Space','Taylor Swift','Album 2 - Taylor Swift',1976,'POP',204,121786);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (123,'Shake It Off','Taylor Swift','Album 3 - Taylor Swift',1970,'POP',173,461150);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (124,'Anti Hero','Taylor Swift','Album 4 - Taylor Swift',1999,'POP',315,173746);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (125,'Cardigan','Taylor Swift','Album 5 - Taylor Swift',1996,'POP',289,411182);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (126,'Cruel Summer','Taylor Swift','Album 6 - Taylor Swift',2023,'POP',321,96157);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (127,'Style','Taylor Swift','Album 7 - Taylor Swift',1971,'POP',240,444330);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (128,'Delicate','Taylor Swift','Album 8 - Taylor Swift',1980,'POP',240,295151);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (129,'Wildest Dreams','Taylor Swift','Album 9 - Taylor Swift',2013,'POP',296,415632);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (130,'Willow','Taylor Swift','Album 10 - Taylor Swift',2004,'POP',205,58010);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (131,'Just the Way You Are','Bruno Mars','Album 1 - Bruno Mars',2009,'RNB',333,147548);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (132,'Grenade','Bruno Mars','Album 2 - Bruno Mars',2005,'RNB',342,298317);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (133,'Locked Out of Heaven','Bruno Mars','Album 3 - Bruno Mars',2016,'RNB',204,299257);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (134,'Uptown Funk','Bruno Mars','Album 4 - Bruno Mars',1988,'RNB',294,141061);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (135,'24K Magic','Bruno Mars','Album 5 - Bruno Mars',2012,'RNB',292,70030);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (136,'When I Was Your Man','Bruno Mars','Album 6 - Bruno Mars',1976,'RNB',350,138761);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (137,'Treasure','Bruno Mars','Album 7 - Bruno Mars',1976,'RNB',261,90297);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (138,'That’s What I Like','Bruno Mars','Album 8 - Bruno Mars',1976,'RNB',325,32180);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (139,'Versace on the Floor','Bruno Mars','Album 9 - Bruno Mars',2018,'RNB',241,379223);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (140,'Talking to the Moon','Bruno Mars','Album 10 - Bruno Mars',2021,'RNB',197,339160);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (141,'Umbrella','Rihanna','Album 1 - Rihanna',2010,'RNB',177,266118);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (142,'Diamonds','Rihanna','Album 2 - Rihanna',1990,'RNB',220,308838);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (143,'We Found Love','Rihanna','Album 3 - Rihanna',2023,'RNB',166,153086);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (144,'Stay','Rihanna','Album 4 - Rihanna',1990,'RNB',191,137264);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (145,'Only Girl','Rihanna','Album 5 - Rihanna',1986,'RNB',166,7772);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (146,'Work','Rihanna','Album 6 - Rihanna',1996,'RNB',348,135264);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (147,'Love on the Brain','Rihanna','Album 7 - Rihanna',1996,'RNB',153,30547);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (148,'Rude Boy','Rihanna','Album 8 - Rihanna',1976,'RNB',210,12546);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (149,'Disturbia','Rihanna','Album 9 - Rihanna',1989,'RNB',181,49714);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (150,'Where Have You Been','Rihanna','Album 10 - Rihanna',2013,'RNB',293,302742);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (151,'Halo','Beyonce','Album 1 - Beyonce',2024,'RNB',239,165637);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (152,'Crazy in Love','Beyonce','Album 2 - Beyonce',2019,'RNB',266,318876);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (153,'Single Ladies','Beyonce','Album 3 - Beyonce',2010,'RNB',317,374955);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (154,'Love on Top','Beyonce','Album 4 - Beyonce',2009,'RNB',159,485332);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (155,'Formation','Beyonce','Album 5 - Beyonce',1995,'RNB',230,319154);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (156,'Drunk in Love','Beyonce','Album 6 - Beyonce',1983,'RNB',302,243072);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (157,'Irreplaceable','Beyonce','Album 7 - Beyonce',1997,'RNB',323,461036);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (158,'Run the World','Beyonce','Album 8 - Beyonce',1977,'RNB',325,196660);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (159,'If I Were a Boy','Beyonce','Album 9 - Beyonce',2025,'RNB',278,357751);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (160,'Break My Soul','Beyonce','Album 10 - Beyonce',1986,'RNB',249,153529);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (161,'HUMBLE','Kendrick Lamar','Album 1 - Kendrick Lamar',2022,'HIPHOP',241,30715);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (162,'DNA','Kendrick Lamar','Album 2 - Kendrick Lamar',2017,'HIPHOP',333,229478);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (163,'Alright','Kendrick Lamar','Album 3 - Kendrick Lamar',1971,'HIPHOP',222,365037);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (164,'Loyalty','Kendrick Lamar','Album 4 - Kendrick Lamar',1991,'HIPHOP',224,381723);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (165,'King Kunta','Kendrick Lamar','Album 5 - Kendrick Lamar',2019,'HIPHOP',354,480675);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (166,'Money Trees','Kendrick Lamar','Album 6 - Kendrick Lamar',1977,'HIPHOP',226,403097);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (167,'Swimming Pools','Kendrick Lamar','Album 7 - Kendrick Lamar',1996,'HIPHOP',231,307526);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (168,'Love','Kendrick Lamar','Album 8 - Kendrick Lamar',1971,'HIPHOP',288,180060);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (169,'N95','Kendrick Lamar','Album 9 - Kendrick Lamar',1982,'HIPHOP',293,29936);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (170,'Not Like Us','Kendrick Lamar','Album 10 - Kendrick Lamar',2016,'HIPHOP',178,85499);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (171,'Do I Wanna Know','Arctic Monkeys','Album 1 - Arctic Monkeys',2009,'ROCK',181,62514);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (172,'R U Mine','Arctic Monkeys','Album 2 - Arctic Monkeys',1972,'ROCK',182,274484);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (173,'505','Arctic Monkeys','Album 3 - Arctic Monkeys',1992,'ROCK',302,340182);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (174,'Why’d You Only Call Me When You’re High','Arctic Monkeys','Album 4 - Arctic Monkeys',2011,'ROCK',227,15596);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (175,'I Bet You Look Good on the Dancefloor','Arctic Monkeys','Album 5 - Arctic Monkeys',1997,'ROCK',298,66716);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (176,'Fluorescent Adolescent','Arctic Monkeys','Album 6 - Arctic Monkeys',1992,'ROCK',256,201882);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (177,'Arabella','Arctic Monkeys','Album 7 - Arctic Monkeys',1994,'ROCK',211,407661);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (178,'Snap Out of It','Arctic Monkeys','Album 8 - Arctic Monkeys',1996,'ROCK',319,115615);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (179,'Crying Lightning','Arctic Monkeys','Album 9 - Arctic Monkeys',2019,'ROCK',182,96689);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (180,'Mardy Bum','Arctic Monkeys','Album 10 - Arctic Monkeys',2004,'ROCK',157,347349);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (181,'Sugar','Maroon 5','Album 1 - Maroon 5',2015,'POP',288,358983);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (182,'Girls Like You','Maroon 5','Album 2 - Maroon 5',2005,'POP',251,466668);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (183,'Moves Like Jagger','Maroon 5','Album 3 - Maroon 5',1986,'POP',351,77928);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (184,'This Love','Maroon 5','Album 4 - Maroon 5',1984,'POP',155,9200);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (185,'Payphone','Maroon 5','Album 5 - Maroon 5',1987,'POP',288,251551);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (186,'Memories','Maroon 5','Album 6 - Maroon 5',1996,'POP',217,165516);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (187,'Animals','Maroon 5','Album 7 - Maroon 5',1978,'POP',310,311743);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (188,'She Will Be Loved','Maroon 5','Album 8 - Maroon 5',1975,'POP',195,290421);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (189,'Maps','Maroon 5','Album 9 - Maroon 5',1972,'POP',316,454599);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (190,'Sunday Morning','Maroon 5','Album 10 - Maroon 5',2022,'POP',281,430344);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (191,'Bad Romance','Lady Gaga','Album 1 - Lady Gaga',1986,'POP',237,332377);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (192,'Poker Face','Lady Gaga','Album 2 - Lady Gaga',2003,'POP',343,390094);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (193,'Shallow','Lady Gaga','Album 3 - Lady Gaga',1990,'POP',164,345412);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (194,'Born This Way','Lady Gaga','Album 4 - Lady Gaga',2023,'POP',152,329678);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (195,'Just Dance','Lady Gaga','Album 5 - Lady Gaga',1985,'POP',270,31064);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (196,'Paparazzi','Lady Gaga','Album 6 - Lady Gaga',1984,'POP',323,267163);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (197,'Alejandro','Lady Gaga','Album 7 - Lady Gaga',2025,'POP',188,486635);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (198,'The Edge of Glory','Lady Gaga','Album 8 - Lady Gaga',2017,'POP',252,371312);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (199,'Rain on Me','Lady Gaga','Album 9 - Lady Gaga',1993,'POP',352,122403);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (200,'Million Reasons','Lady Gaga','Album 10 - Lady Gaga',2005,'POP',220,180691);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (201,'All You Need Is Love','The Beatles','Album 1 - The Beatles',2025,'ROCK',201,196964);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (202,'Love Me Do','The Beatles','Album 2 - The Beatles',1992,'ROCK',267,334477);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (203,'And I Love Her','The Beatles','Album 3 - The Beatles',1999,'ROCK',290,425926);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (204,'Something','The Beatles','Album 4 - The Beatles',2000,'ROCK',351,353557);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (205,'Hey Jude','The Beatles','Album 5 - The Beatles',2007,'ROCK',229,99014);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (206,'Let It Be','The Beatles','Album 6 - The Beatles',1980,'ROCK',310,215740);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (207,'Yesterday','The Beatles','Album 7 - The Beatles',1979,'ROCK',274,469107);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (208,'Come Together','The Beatles','Album 8 - The Beatles',1970,'ROCK',240,427141);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (209,'Here Comes the Sun','The Beatles','Album 9 - The Beatles',2023,'ROCK',283,368732);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (210,'In My Life','The Beatles','Album 10 - The Beatles',1996,'ROCK',353,20164);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (211,'Your Song','Elton John','Album 1 - Elton John',2010,'POP',194,44648);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (212,'Rocket Man','Elton John','Album 2 - Elton John',1989,'POP',245,287141);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (213,'Tiny Dancer','Elton John','Album 3 - Elton John',2016,'POP',217,72831);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (214,'Candle in the Wind','Elton John','Album 4 - Elton John',2015,'POP',339,53322);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (215,'Im Still Standing','Elton John','Album 5 - Elton John',1971,'POP',286,114334);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (216,'Sacrifice','Elton John','Album 6 - Elton John',2024,'POP',328,305839);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (217,'Bennie and the Jets','Elton John','Album 7 - Elton John',1989,'POP',296,23905);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (218,'Goodbye Yellow Brick Road','Elton John','Album 8 - Elton John',1995,'POP',247,283081);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (219,'Daniel','Elton John','Album 9 - Elton John',2003,'POP',357,338165);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (220,'Levon','Elton John','Album 10 - Elton John',2012,'POP',190,267237);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (221,'One Love','Bob Marley','Album 1 - Bob Marley',1976,'REGGAE',171,74892);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (222,'Three Little Birds','Bob Marley','Album 2 - Bob Marley',2016,'REGGAE',249,175407);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (223,'Redemption Song','Bob Marley','Album 3 - Bob Marley',2005,'REGGAE',216,163249);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (224,'Is This Love','Bob Marley','Album 4 - Bob Marley',1972,'REGGAE',338,311256);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (225,'No Woman No Cry','Bob Marley','Album 5 - Bob Marley',2012,'REGGAE',351,99997);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (226,'Could You Be Loved','Bob Marley','Album 6 - Bob Marley',1980,'REGGAE',224,155317);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (227,'Jamming','Bob Marley','Album 7 - Bob Marley',2004,'REGGAE',223,187787);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (228,'Waiting in Vain','Bob Marley','Album 8 - Bob Marley',1978,'REGGAE',249,99431);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (229,'Stir It Up','Bob Marley','Album 9 - Bob Marley',2017,'REGGAE',311,5453);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (230,'Buffalo Soldier','Bob Marley','Album 10 - Bob Marley',2024,'REGGAE',305,340124);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (231,'Thank U Next','Ariana Grande','Album 1 - Ariana Grande',2000,'POP',258,186967);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (232,'7 Rings','Ariana Grande','Album 2 - Ariana Grande',2021,'POP',347,473474);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (233,'Into You','Ariana Grande','Album 3 - Ariana Grande',2019,'POP',287,90093);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (234,'Positions','Ariana Grande','Album 4 - Ariana Grande',2016,'POP',282,15973);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (235,'Problem','Ariana Grande','Album 5 - Ariana Grande',1981,'POP',230,283141);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (236,'No Tears Left to Cry','Ariana Grande','Album 6 - Ariana Grande',1979,'POP',191,15399);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (237,'One Last Time','Ariana Grande','Album 7 - Ariana Grande',1977,'POP',281,350568);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (238,'Dangerous Woman','Ariana Grande','Album 8 - Ariana Grande',2015,'POP',314,402531);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (239,'God Is a Woman','Ariana Grande','Album 9 - Ariana Grande',1970,'POP',245,33844);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (240,'Side to Side','Ariana Grande','Album 10 - Ariana Grande',1993,'POP',227,113846);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (241,'Levitating','Dua Lipa','Album 1 - Dua Lipa',2004,'ELECTRONIC',189,314808);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (242,'Dont Start Now','Dua Lipa','Album 2 - Dua Lipa',2009,'ELECTRONIC',213,66835);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (243,'New Rules','Dua Lipa','Album 3 - Dua Lipa',1976,'ELECTRONIC',233,254551);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (244,'Physical','Dua Lipa','Album 4 - Dua Lipa',1976,'ELECTRONIC',336,38841);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (245,'Break My Heart','Dua Lipa','Album 5 - Dua Lipa',1994,'ELECTRONIC',217,323961);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (246,'Houdini','Dua Lipa','Album 6 - Dua Lipa',1989,'ELECTRONIC',315,62129);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (247,'Training Season','Dua Lipa','Album 7 - Dua Lipa',1992,'ELECTRONIC',271,477339);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (248,'Be the One','Dua Lipa','Album 8 - Dua Lipa',2001,'ELECTRONIC',180,291790);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (249,'Love Again','Dua Lipa','Album 9 - Dua Lipa',2003,'ELECTRONIC',213,434947);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (250,'IDGAF','Dua Lipa','Album 10 - Dua Lipa',1992,'ELECTRONIC',324,427941);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (251,'Circles','Post Malone','Album 1 - Post Malone',1999,'HIPHOP',299,181441);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (252,'Sunflower','Post Malone','Album 2 - Post Malone',1975,'HIPHOP',167,408944);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (253,'Rockstar','Post Malone','Album 3 - Post Malone',1975,'HIPHOP',356,259924);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (254,'Congratulations','Post Malone','Album 4 - Post Malone',2019,'HIPHOP',229,139595);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (255,'Better Now','Post Malone','Album 5 - Post Malone',2018,'HIPHOP',319,119014);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (256,'White Iverson','Post Malone','Album 6 - Post Malone',1980,'HIPHOP',233,227305);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (257,'Chemical','Post Malone','Album 7 - Post Malone',2002,'HIPHOP',293,174412);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (258,'I Fall Apart','Post Malone','Album 8 - Post Malone',1990,'HIPHOP',335,344983);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (259,'Wow','Post Malone','Album 9 - Post Malone',2024,'HIPHOP',276,211824);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (260,'Goodbyes','Post Malone','Album 10 - Post Malone',1990,'HIPHOP',195,103515);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (261,'Believer','Imagine Dragons','Album 1 - Imagine Dragons',2021,'ROCK',268,115932);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (262,'Demons','Imagine Dragons','Album 2 - Imagine Dragons',2025,'ROCK',326,482709);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (263,'Thunder','Imagine Dragons','Album 3 - Imagine Dragons',1992,'ROCK',344,413211);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (264,'Radioactive','Imagine Dragons','Album 4 - Imagine Dragons',1992,'ROCK',254,436509);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (265,'Whatever It Takes','Imagine Dragons','Album 5 - Imagine Dragons',2021,'ROCK',301,200582);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (266,'Enemy','Imagine Dragons','Album 6 - Imagine Dragons',1983,'ROCK',189,232063);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (267,'Bones','Imagine Dragons','Album 7 - Imagine Dragons',2017,'ROCK',295,344874);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (268,'Natural','Imagine Dragons','Album 8 - Imagine Dragons',2017,'ROCK',182,226623);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (269,'Bad Liar','Imagine Dragons','Album 9 - Imagine Dragons',1987,'ROCK',234,438619);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (270,'On Top of the World','Imagine Dragons','Album 10 - Imagine Dragons',1977,'ROCK',231,140199);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (271,'In the End','Linkin Park','Album 1 - Linkin Park',2023,'ROCK',263,138714);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (272,'Numb','Linkin Park','Album 2 - Linkin Park',1979,'ROCK',289,329163);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (273,'Crawling','Linkin Park','Album 3 - Linkin Park',1987,'ROCK',209,174443);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (274,'One Step Closer','Linkin Park','Album 4 - Linkin Park',1979,'ROCK',293,405471);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (275,'Breaking the Habit','Linkin Park','Album 5 - Linkin Park',1977,'ROCK',218,154362);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (276,'What I’ve Done','Linkin Park','Album 6 - Linkin Park',2006,'ROCK',267,332474);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (277,'Somewhere I Belong','Linkin Park','Album 7 - Linkin Park',1995,'ROCK',252,11887);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (278,'Faint','Linkin Park','Album 8 - Linkin Park',2005,'ROCK',333,173079);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (279,'Papercut','Linkin Park','Album 9 - Linkin Park',2013,'ROCK',254,177099);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (280,'New Divide','Linkin Park','Album 10 - Linkin Park',1976,'ROCK',323,402709);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (281,'Chandelier','Sia','Album 1 - Sia',2001,'POP',323,444758);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (282,'Cheap Thrills','Sia','Album 2 - Sia',2010,'POP',320,401249);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (283,'Elastic Heart','Sia','Album 3 - Sia',2004,'POP',282,110554);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (284,'Unstoppable','Sia','Album 4 - Sia',1997,'POP',240,340356);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (285,'Titanium','Sia','Album 5 - Sia',1991,'POP',165,484360);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (286,'Alive','Sia','Album 6 - Sia',1995,'POP',335,91185);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (287,'Snowman','Sia','Album 7 - Sia',1970,'POP',218,293535);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (288,'The Greatest','Sia','Album 8 - Sia',2014,'POP',214,68971);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (289,'Breathe Me','Sia','Album 9 - Sia',1991,'POP',298,338333);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (290,'Never Give Up','Sia','Album 10 - Sia',2009,'POP',256,437190);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (291,'Sorry','Justin Bieber','Album 1 - Justin Bieber',2019,'POP',355,250031);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (292,'Love Yourself','Justin Bieber','Album 2 - Justin Bieber',2024,'POP',273,178100);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (293,'Baby','Justin Bieber','Album 3 - Justin Bieber',1970,'POP',159,397527);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (294,'Peaches','Justin Bieber','Album 4 - Justin Bieber',1984,'POP',312,63855);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (295,'What Do You Mean','Justin Bieber','Album 5 - Justin Bieber',2012,'POP',218,171739);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (296,'Stay (Studio Version)','Justin Bieber','Album 6 - Justin Bieber',1971,'POP',349,110193);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (297,'Yummy','Justin Bieber','Album 7 - Justin Bieber',2020,'POP',267,270477);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (298,'Company','Justin Bieber','Album 8 - Justin Bieber',1987,'POP',309,330890);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (299,'Anyone','Justin Bieber','Album 9 - Justin Bieber',1993,'POP',170,291880);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (300,'Ghost','Justin Bieber','Album 10 - Justin Bieber',2014,'POP',198,283070);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (301,'Bad Guy','Billie Eilish','Album 1 - Billie Eilish',2019,'POP',152,50618);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (302,'Lovely','Billie Eilish','Album 2 - Billie Eilish',1979,'POP',234,115531);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (303,'Happier Than Ever','Billie Eilish','Album 3 - Billie Eilish',1999,'POP',202,318261);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (304,'Ocean Eyes','Billie Eilish','Album 4 - Billie Eilish',2013,'POP',193,370393);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (305,'When the Party’s Over','Billie Eilish','Album 5 - Billie Eilish',1989,'POP',171,298099);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (306,'Everything I Wanted','Billie Eilish','Album 6 - Billie Eilish',1996,'POP',332,274073);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (307,'Therefore I Am','Billie Eilish','Album 7 - Billie Eilish',2013,'POP',300,293659);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (308,'Bury a Friend','Billie Eilish','Album 8 - Billie Eilish',1978,'POP',177,15339);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (309,'Birds of a Feather','Billie Eilish','Album 9 - Billie Eilish',1987,'POP',257,23819);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (310,'What Was I Made For','Billie Eilish','Album 10 - Billie Eilish',1981,'POP',290,385458);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (311,'Boulevard of Broken Dreams','Green Day','Album 1 - Green Day',2002,'ROCK',209,495157);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (312,'American Idiot','Green Day','Album 2 - Green Day',2000,'ROCK',318,348129);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (313,'Wake Me Up When September Ends','Green Day','Album 3 - Green Day',1991,'ROCK',237,182644);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (314,'Holiday','Green Day','Album 4 - Green Day',1990,'ROCK',305,251996);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (315,'21 Guns','Green Day','Album 5 - Green Day',1986,'ROCK',275,463582);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (316,'Basket Case','Green Day','Album 6 - Green Day',1990,'ROCK',214,19749);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (317,'Good Riddance','Green Day','Album 7 - Green Day',2011,'ROCK',275,70353);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (318,'When I Come Around','Green Day','Album 8 - Green Day',1971,'ROCK',273,424623);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (319,'Brain Stew','Green Day','Album 9 - Green Day',1993,'ROCK',214,439075);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (320,'Longview','Green Day','Album 10 - Green Day',2018,'ROCK',269,104693);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (321,'Wonderwall','Oasis','Album 1 - Oasis',1993,'ROCK',220,269089);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (322,'Dont Look Back in Anger','Oasis','Album 2 - Oasis',2023,'ROCK',337,210176);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (323,'Champagne Supernova','Oasis','Album 3 - Oasis',1989,'ROCK',205,305500);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (324,'Live Forever','Oasis','Album 4 - Oasis',1973,'ROCK',358,215908);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (325,'Stop Crying Your Heart Out','Oasis','Album 5 - Oasis',2025,'ROCK',166,381075);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (326,'Supersonic','Oasis','Album 6 - Oasis',2016,'ROCK',315,347138);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (327,'Some Might Say','Oasis','Album 7 - Oasis',2002,'ROCK',324,279563);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (328,'Morning Glory','Oasis','Album 8 - Oasis',2019,'ROCK',226,253519);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (329,'Whatever','Oasis','Album 9 - Oasis',2009,'ROCK',173,447743);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (330,'Stand by Me','Oasis','Album 10 - Oasis',2002,'ROCK',283,312886);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (331,'Dancing Queen','ABBA','Album 1 - ABBA',1990,'POP',275,167189);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (332,'Mamma Mia','ABBA','Album 2 - ABBA',2012,'POP',236,189285);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (333,'The Winner Takes It All','ABBA','Album 3 - ABBA',1981,'POP',169,295172);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (334,'Gimme Gimme Gimme','ABBA','Album 4 - ABBA',2025,'POP',354,91908);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (335,'Take a Chance on Me','ABBA','Album 5 - ABBA',2018,'POP',215,497248);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (336,'Waterloo','ABBA','Album 6 - ABBA',2025,'POP',285,273414);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (337,'Fernando','ABBA','Album 7 - ABBA',2025,'POP',248,331085);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (338,'Chiquitita','ABBA','Album 8 - ABBA',1976,'POP',305,113139);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (339,'Voulez Vous','ABBA','Album 9 - ABBA',1971,'POP',268,126798);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (340,'Knowing Me Knowing You','ABBA','Album 10 - ABBA',1983,'POP',259,266856);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (341,'Titanium (Acoustic Version)','David Guetta','Album 1 - David Guetta',2024,'ELECTRONIC',284,66814);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (342,'When Love Takes Over','David Guetta','Album 2 - David Guetta',2002,'ELECTRONIC',204,415569);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (343,'Memories (Remastered)','David Guetta','Album 3 - David Guetta',2025,'ELECTRONIC',219,407234);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (344,'Play Hard','David Guetta','Album 4 - David Guetta',2025,'ELECTRONIC',333,256658);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (345,'Without You','David Guetta','Album 5 - David Guetta',1978,'ELECTRONIC',293,356224);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (346,'Hey Mama','David Guetta','Album 6 - David Guetta',2023,'ELECTRONIC',233,191207);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (347,'Turn Me On','David Guetta','Album 7 - David Guetta',2011,'ELECTRONIC',250,279789);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (348,'2U','David Guetta','Album 8 - David Guetta',2009,'ELECTRONIC',335,283140);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (349,'Flames','David Guetta','Album 9 - David Guetta',1982,'ELECTRONIC',188,318623);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (350,'Love Is Gone','David Guetta','Album 10 - David Guetta',2005,'ELECTRONIC',330,80772);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (351,'Alors on danse','Stromae','Album 1 - Stromae',2016,'ELECTRONIC',186,69316);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (352,'Papaoutai','Stromae','Album 2 - Stromae',2021,'ELECTRONIC',358,419487);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (353,'Formidable','Stromae','Album 3 - Stromae',2012,'ELECTRONIC',296,32522);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (354,'Tous les mêmes','Stromae','Album 4 - Stromae',2021,'ELECTRONIC',320,454229);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (355,'L’enfer','Stromae','Album 5 - Stromae',1972,'ELECTRONIC',221,414431);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (356,'Santé','Stromae','Album 6 - Stromae',1989,'ELECTRONIC',359,94340);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (357,'Carmen','Stromae','Album 7 - Stromae',1978,'ELECTRONIC',218,283782);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (358,'Ave Cesaria','Stromae','Album 8 - Stromae',2014,'ELECTRONIC',241,67603);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (359,'Quand c’est','Stromae','Album 9 - Stromae',1999,'ELECTRONIC',193,98317);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (360,'Te Quiero','Stromae','Album 10 - Stromae',2014,'ELECTRONIC',163,394428);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (361,'Hips Dont Lie','Shakira','Album 1 - Shakira',1981,'POP',324,81187);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (362,'Waka Waka','Shakira','Album 2 - Shakira',1996,'POP',314,327026);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (363,'Whenever Wherever','Shakira','Album 3 - Shakira',2001,'POP',289,15709);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (364,'Underneath Your Clothes','Shakira','Album 4 - Shakira',1989,'POP',206,270286);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (365,'La Tortura','Shakira','Album 5 - Shakira',1993,'POP',288,48728);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (366,'Beautiful Liar','Shakira','Album 6 - Shakira',1999,'POP',324,392220);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (367,'Try Everything','Shakira','Album 7 - Shakira',1996,'POP',189,472428);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (368,'Empire','Shakira','Album 8 - Shakira',1990,'POP',187,375269);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (369,'Me Enamoré','Shakira','Album 9 - Shakira',2002,'POP',160,247354);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (370,'Loca','Shakira','Album 10 - Shakira',1970,'POP',164,50127);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (371,'All of Me','John Legend','Album 1 - John Legend',1992,'RNB',300,442914);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (372,'Ordinary People','John Legend','Album 2 - John Legend',2015,'RNB',328,426985);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (373,'Tonight','John Legend','Album 3 - John Legend',2022,'RNB',215,172871);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (374,'Save Room','John Legend','Album 4 - John Legend',2018,'RNB',157,86383);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (375,'Green Light','John Legend','Album 5 - John Legend',2002,'RNB',198,456152);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (376,'Love Me Now','John Legend','Album 6 - John Legend',2022,'RNB',173,222190);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (377,'You and I','John Legend','Album 7 - John Legend',2012,'RNB',260,105061);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (378,'Conversations in the Dark','John Legend','Album 8 - John Legend',2023,'RNB',193,126916);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (379,'Everybody Knows','John Legend','Album 9 - John Legend',1984,'RNB',319,259790);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (380,'Glory','John Legend','Album 10 - John Legend',1983,'RNB',245,83606);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (381,'Everlong','Foo Fighters','Album 1 - Foo Fighters',2004,'ROCK',258,378569);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (382,'The Pretender','Foo Fighters','Album 2 - Foo Fighters',1997,'ROCK',267,449378);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (383,'Best of You','Foo Fighters','Album 3 - Foo Fighters',1993,'ROCK',330,110171);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (384,'Learn to Fly','Foo Fighters','Album 4 - Foo Fighters',1989,'ROCK',311,387638);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (385,'Times Like These','Foo Fighters','Album 5 - Foo Fighters',1998,'ROCK',293,318537);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (386,'My Hero','Foo Fighters','Album 6 - Foo Fighters',2000,'ROCK',173,461197);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (387,'Walk','Foo Fighters','Album 7 - Foo Fighters',1983,'ROCK',339,102970);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (388,'All My Life','Foo Fighters','Album 8 - Foo Fighters',1977,'ROCK',343,41823);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (389,'Monkey Wrench','Foo Fighters','Album 9 - Foo Fighters',1992,'ROCK',332,356503);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (390,'The Sky Is a Neighborhood','Foo Fighters','Album 10 - Foo Fighters',2009,'ROCK',326,83372);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (391,'Uprising','Muse','Album 1 - Muse',1977,'ROCK',194,107228);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (392,'Starlight','Muse','Album 2 - Muse',2011,'ROCK',260,99747);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (393,'Supermassive Black Hole','Muse','Album 3 - Muse',1997,'ROCK',157,287234);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (394,'Time Is Running Out','Muse','Album 4 - Muse',1979,'ROCK',315,470143);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (395,'Madness','Muse','Album 5 - Muse',2010,'ROCK',352,141392);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (396,'Hysteria','Muse','Album 6 - Muse',1988,'ROCK',339,191984);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (397,'Plug In Baby','Muse','Album 7 - Muse',1995,'ROCK',152,250362);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (398,'Knights of Cydonia','Muse','Album 8 - Muse',2003,'ROCK',267,465405);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (399,'Psycho','Muse','Album 9 - Muse',1987,'ROCK',240,256442);
+
+INSERT INTO chanson
+(id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
+VALUES (400,'Resistance','Muse','Album 10 - Muse',1978,'ROCK',177,416434);
