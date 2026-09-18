@@ -8,4 +8,13 @@ public interface ChansonDAO {
 
     List<Chanson> trouverTous();
 
+    Chanson trouverParId(int id);
+
+    void ajouter(Chanson chanson);
+
+    void modifier(Chanson chanson);
+
+    void supprimer(int id);
+
+
 }

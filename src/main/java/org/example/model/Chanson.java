@@ -62,6 +62,30 @@ public class Chanson {
         this.id = id;
     }
 
+    public void setTitre(String titre) {
+        this.titre = titre;
+    }
+
+    public void setDuree(int duree) {
+        this.duree = duree;
+    }
+
+    public void setGenre(Genre genre) {
+        this.genre = genre;
+    }
+
+    public void setAnnee(int annee) {
+        this.annee = annee;
+    }
+
+    public void setAlbum(String album) {
+        this.album = album;
+    }
+
+    public void setArtiste(String artiste) {
+        this.artiste = artiste;
+    }
+
     public void incrementerEcoutes(){
         nbr_ecoute++;
     }
