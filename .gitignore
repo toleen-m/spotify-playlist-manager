@@ -23,6 +23,8 @@ target/
 .sts4-cache
 
 ### NetBeans ###
+
+
 /nbproject/private/
 /nbbuild/
 /dist/
@@ -37,4 +39,4 @@ build/
 
 ### Mac OS ###
 .DS_Store
-src/main/java/org/example/dao/Connexion.java
+src/main/resources/database.properties
