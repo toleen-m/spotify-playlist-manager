@@ -1597,3 +1597,8 @@ VALUES (399,'Psycho','Muse','Album 9 - Muse',1987,'ROCK',240,256442);
 INSERT INTO chanson
 (id, titre, artiste, album, annee, genre, duree, nbr_ecoute)
 VALUES (400,'Resistance','Muse','Album 10 - Muse',1978,'ROCK',177,416434);
+
+SELECT setval(
+               pg_get_serial_sequence('chanson', 'id'),
+               (SELECT MAX(id) FROM chanson)
+       );
