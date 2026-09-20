@@ -17,7 +17,7 @@ CREATE TYPE genre AS ENUM (
 );
 
 CREATE TABLE chanson (
-                         id INTEGER PRIMARY KEY,
+                         id SERIAL PRIMARY KEY,
                          titre VARCHAR(200) NOT NULL,
                          artiste VARCHAR(150) NOT NULL,
                          album VARCHAR(200) NOT NULL,

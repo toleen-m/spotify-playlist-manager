@@ -85,6 +85,9 @@
                 <Button text="Pause" onAction="#pause"/>
                 <Button text="Next" onAction="#suivant"/>
                 <Button text="Shuffle" onAction="#shuffle"/>
+                <Button text="Ajouter" onAction="#ajouterChanson"/>
+                <Button text="Modifier" onAction="#modifierChanson"/>
+                <Button text="Supprimer" onAction="#supprimerChanson"/>
             </HBox>
 
         </VBox>
