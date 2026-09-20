@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class PlaylistDAOImpl implements PlaylistDAO {
 
@@ -34,7 +35,7 @@ public class PlaylistDAOImpl implements PlaylistDAO {
     }
 
     @Override
-    public Playlist trouverParId(int id) {
+    public Optional<Playlist> trouverParId(int id) {
         String sql =
                 "SELECT id, nom " +
                         "FROM playlist " +
@@ -46,7 +47,7 @@ public class PlaylistDAOImpl implements PlaylistDAO {
             ps.setInt(1, id);
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
-                    return new Playlist(
+                    Playlist playlist = new Playlist(
                             rs.getInt("id"),
                             rs.getString("nom")
                     );
@@ -55,7 +56,7 @@ public class PlaylistDAOImpl implements PlaylistDAO {
         } catch (SQLException e) {
             throw new RuntimeException("Erreur lors de la recherche de la playlist", e);
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override

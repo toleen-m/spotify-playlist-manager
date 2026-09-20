@@ -36,10 +36,7 @@ public class ChansonDAOImpl implements ChansonDAO {
                 chansons.add(chanson);
             }
         } catch (SQLException e) {
-            throw new RuntimeException(
-                    "Erreur lors de la récupération des chansons",
-                    e
-            );
+            throw new RuntimeException("Erreur lors de la récupération des chansons", e);
         }
         return chansons;
     }
@@ -68,10 +65,7 @@ public class ChansonDAOImpl implements ChansonDAO {
                 }
             }
         } catch (SQLException e) {
-            throw new RuntimeException(
-                    "Erreur lors de la recherche de la chanson",
-                    e
-            );
+            throw new RuntimeException("Erreur lors de la recherche de la chanson", e);
         }
         return Optional.empty();
     }
@@ -93,10 +87,7 @@ public class ChansonDAOImpl implements ChansonDAO {
             statement.setInt(7, chanson.getNbr_ecoute());
             statement.executeUpdate();
         } catch (SQLException e) {
-            throw new RuntimeException(
-                    "Erreur lors de l'ajout de la chanson.",
-                    e
-            );
+            throw new RuntimeException("Erreur lors de l'ajout de la chanson.", e);
         }
     }
 
