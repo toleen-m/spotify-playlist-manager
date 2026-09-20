@@ -29,7 +29,8 @@ import org.example.model.ResultatTri;
 import org.example.model.ResultatBenchmark;
 import org.example.service.ServiceTri;
 import org.example.service.ServiceBenchmark;
-
+import org.example.dao.ChansonDAO;
+import org.example.dao.ChansonDAOImpl;
 
 public class MainController {
 
@@ -77,6 +78,7 @@ public class MainController {
 
     private ServiceRecherche serviceRecherche;
     private Bibliotheque bibliotheque;
+    private ChansonDAO chansonDAO;
     private ServicePlaylist servicePlaylist;
     private LecteurSimule lecteurSimule;
     private ServiceFiltre serviceFiltre;
@@ -87,8 +89,10 @@ public class MainController {
     private ServiceTri serviceTri;
     private ServiceBenchmark serviceBenchmark;
 
+
     @FXML
     public void initialize() {
+        chansonDAO = new ChansonDAOImpl();
         colTitre.setCellValueFactory(new PropertyValueFactory<>("titre"));
         colArtiste.setCellValueFactory(new PropertyValueFactory<>("artiste"));
         colAlbum.setCellValueFactory(new PropertyValueFactory<>("album"));
@@ -459,6 +463,7 @@ public class MainController {
         }
     }
 
+
     private void appliquerFiltres() {
         Genre genre = null;
         if (!comboGenre.getValue().equals("Tous")) {
@@ -475,5 +480,52 @@ public class MainController {
 
         pageActuelle = 1;
         afficherPage();
+    }
+    @FXML
+    private void ajouterChanson() {
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle("Ajouter une chanson");
+        dialog.setHeaderText("Ajouter une nouvelle chanson");
+        dialog.setContentText("Titre :");
+        dialog.showAndWait().ifPresent(titre -> {
+            if (titre.isBlank()) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("Le titre est obligatoire.");
+                alert.show();
+                return;
+            }
+
+            try {
+                Chanson chanson = new Chanson(
+                        0,
+                        titre,
+                        "Artiste inconnu",
+                        "Album inconnu",
+                        2026,
+                        Genre.POP,
+                        180,
+                        0
+                );
+
+                chansonDAO.ajouter(chanson);
+                List<Chanson> chansons = chansonDAO.trouverTous();
+                bibliotheque = new Bibliotheque(chansons);
+                chansonsAffichees = bibliotheque.getChansons();
+                pageActuelle = 1;
+                afficherPage();
+            } catch (Exception e) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Erreur");
+                alert.setContentText("Impossible d'ajouter la chanson.");
+                alert.show();
+            }
+        });
+    }
+
+    @FXML
+    private void modifierChanson() {
+    }
+    @FXML
+    private void supprimerChanson() {
     }
 }
