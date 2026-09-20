@@ -110,9 +110,21 @@ public class MainController {
         colEcoutes.setCellValueFactory(new PropertyValueFactory<>("nbr_ecoute"));
         LecteurBD lecteur = new LecteurBD();
         List<Chanson> chansons = lecteur.charger();
-
         bibliotheque = new Bibliotheque(chansons);
+        List<Playlist> playlists = playlistDAO.trouverTous();
+        for (Playlist playlist : playlists) {
+
+            List<Integer> idsChansons =
+                    playlistChansonDAO.trouverChansons(playlist.getId());
+            for (Integer idChanson : idsChansons) {
+                chansonDAO.trouverParId(idChanson)
+                        .ifPresent(playlist::ajouterChanson);
+            }
+
+            bibliotheque.ajouterPlaylist(playlist);
+        }
         servicePlaylist = new ServicePlaylist(bibliotheque);
+
         serviceRecherche = new ServiceRecherche(bibliotheque);
         serviceFiltre = new ServiceFiltre(bibliotheque);
         serviceTri = new ServiceTri();
@@ -146,6 +158,11 @@ public class MainController {
                 }
             }
         });
+        listePlaylists.setItems(
+                FXCollections.observableArrayList(
+                        bibliotheque.getPlaylists()
+                )
+        );
 
         comboGenre.getItems().add("Tous");
         for (Genre genre : Genre.values()) {

@@ -71,9 +71,15 @@ public class PlaylistController {
             rafraichirPlaylist();
         }
     }
-
     @FXML
     private void viderPlaylist() {
+        for (Chanson chanson : playlist.getChansons()) {
+            playlistChansonDAO.supprimerChanson(
+                    playlist.getId(),
+                    chanson.getId()
+            );
+        }
+
         servicePlaylist.viderPlaylist(playlist);
         rafraichirPlaylist();
     }
