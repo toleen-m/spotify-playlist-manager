@@ -31,6 +31,7 @@ import org.example.service.ServiceTri;
 import org.example.service.ServiceBenchmark;
 import org.example.dao.ChansonDAO;
 import org.example.dao.ChansonDAOImpl;
+import javafx.scene.layout.GridPane;
 
 public class MainController {
 
@@ -193,7 +194,7 @@ public class MainController {
             );
         });
         listePlaylists.setOnMouseClicked(event -> {
-            if (event.getClickCount() == 2) {
+            if (event.getClickCount()== 2) {
                 ouvrirPlaylist();
             }
         });
@@ -227,7 +228,7 @@ public class MainController {
         TextInputDialog dialog = new TextInputDialog();
         dialog.setTitle("Nouvelle playlist");
         dialog.setHeaderText("Créer une playlist");
-        dialog.setContentText("Nom :");
+        dialog.setContentText("Nom:");
         dialog.showAndWait().ifPresent(nom -> {
             servicePlaylist.creerPlaylist(nom);
             listePlaylists.setItems(
@@ -305,11 +306,11 @@ public class MainController {
 
             Comparator<Chanson> comparateur = null;
 
-            if (choix.equals("Titre")) {
+            if (choix.equals("Titre")){
                 comparateur = serviceTri.parTitre();
             } else if (choix.equals("Artiste")) {
                 comparateur = serviceTri.parArtiste();
-            } else if (choix.equals("Durée")) {
+            } else if (choix.equals("Durée")){
                 comparateur = serviceTri.parDuree();
             } else if (choix.equals("Année")) {
                 comparateur = serviceTri.parAnnee();
@@ -425,7 +426,7 @@ public class MainController {
                     chanson.getTitre() + " - " + chanson.getArtiste()
             );
             ecoutesChanson.setText(
-                    "Écoutes : " + chanson.getNbr_ecoute()
+                    "Écoutes: " +chanson.getNbr_ecoute()
             );
         }
     }
@@ -483,30 +484,91 @@ public class MainController {
     }
     @FXML
     private void ajouterChanson() {
-        TextInputDialog dialog = new TextInputDialog();
+        Dialog<Chanson> dialog = new Dialog<>();
         dialog.setTitle("Ajouter une chanson");
-        dialog.setHeaderText("Ajouter une nouvelle chanson");
-        dialog.setContentText("Titre :");
-        dialog.showAndWait().ifPresent(titre -> {
-            if (titre.isBlank()) {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("Le titre est obligatoire.");
-                alert.show();
-                return;
+        ButtonType ajouterButton =
+                new ButtonType("Ajouter", ButtonBar.ButtonData.OK_DONE);
+        dialog.getDialogPane().getButtonTypes().addAll(
+                ajouterButton,
+                ButtonType.CANCEL
+        );
+        TextField titre = new TextField();
+        TextField artiste = new TextField();
+        TextField album = new TextField();
+        TextField annee = new TextField();
+        ComboBox<Genre> genre = new ComboBox<>();
+        TextField duree = new TextField();
+        TextField ecoutes = new TextField();
+        genre.getItems().addAll(Genre.values());
+
+        GridPane grille = new GridPane();
+        grille.setHgap(10);
+        grille.setVgap(10);
+        grille.add(new Label("Titre :"), 0, 0);
+        grille.add(titre, 1, 0);
+        grille.add(new Label("Artiste :"), 0, 1);
+        grille.add(artiste, 1, 1);
+        grille.add(new Label("Album :"), 0, 2);
+        grille.add(album, 1, 2);
+        grille.add(new Label("Année :"), 0, 3);
+        grille.add(annee, 1, 3);
+        grille.add(new Label("Genre :"), 0, 4);
+        grille.add(genre, 1, 4);
+        grille.add(new Label("Durée :"), 0, 5);
+        grille.add(duree, 1, 5);
+        grille.add(new Label("Écoutes :"), 0, 6);
+        grille.add(ecoutes, 1, 6);
+        dialog.getDialogPane().setContent(grille);
+        dialog.setResultConverter(button -> {
+
+            if (button == ajouterButton) {
+                try {
+                    if (titre.getText().isBlank()
+                            || artiste.getText().isBlank()
+                            || album.getText().isBlank()
+                            || genre.getValue() == null) {
+                        new Alert(
+                                Alert.AlertType.ERROR,
+                                "Tous les champs sont obligatoires."
+                        ).show();
+                        return null;
+                    }
+
+                    int anneeValeur = Integer.parseInt(annee.getText());
+                    int dureeValeur = Integer.parseInt(duree.getText());
+                    int ecoutesValeur = Integer.parseInt(ecoutes.getText());
+                    if (anneeValeur < 1900
+                            || dureeValeur <= 0
+                            || ecoutesValeur < 0) {
+                        new Alert(
+                                Alert.AlertType.ERROR,
+                                "Valeurs invalides."
+                        ).show();
+                        return null;
+                    }
+
+                    return new Chanson(
+                            0,
+                            titre.getText(),
+                            artiste.getText(),
+                            album.getText(),
+                            anneeValeur,
+                            genre.getValue(),
+                            dureeValeur,
+                            ecoutesValeur
+                    );
+                } catch (NumberFormatException e) {
+                    new Alert(
+                            Alert.AlertType.ERROR,
+                            "Année, durée et écoutes doivent être des nombres."
+                    ).show();
+                }
             }
+            return null;
+        });
 
+        dialog.showAndWait().ifPresent(chanson -> {
             try {
-                Chanson chanson = new Chanson(
-                        0,
-                        titre,
-                        "Artiste inconnu",
-                        "Album inconnu",
-                        2026,
-                        Genre.POP,
-                        180,
-                        0
-                );
-
                 chansonDAO.ajouter(chanson);
                 List<Chanson> chansons = chansonDAO.trouverTous();
                 bibliotheque = new Bibliotheque(chansons);
@@ -514,18 +576,129 @@ public class MainController {
                 pageActuelle = 1;
                 afficherPage();
             } catch (Exception e) {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Erreur");
-                alert.setContentText("Impossible d'ajouter la chanson.");
-                alert.show();
+                new Alert(
+                        Alert.AlertType.ERROR,
+                        "Erreur lors de l'ajout."
+                ).show();
             }
         });
     }
 
     @FXML
     private void modifierChanson() {
+        Chanson chanson = tableChansons.getSelectionModel().getSelectedItem();
+        if (chanson == null) {
+            return;
+        }
+        Dialog<Chanson> dialog = new Dialog<>();
+        dialog.setTitle("Modifier une chanson");
+
+        ButtonType modifierButton = new ButtonType("Modifier", ButtonBar.ButtonData.OK_DONE);
+        dialog.getDialogPane().getButtonTypes().addAll(modifierButton, ButtonType.CANCEL);
+        TextField titre = new TextField(chanson.getTitre());
+        TextField artiste = new TextField(chanson.getArtiste());
+        TextField album = new TextField(chanson.getAlbum());
+        TextField annee = new TextField(String.valueOf(chanson.getAnnee()));
+        TextField duree = new TextField(String.valueOf(chanson.getDuree()));
+        TextField ecoutes = new TextField(String.valueOf(chanson.getNbr_ecoute()));
+
+        ComboBox<Genre> genre = new ComboBox<>();
+        genre.getItems().addAll(Genre.values());
+        genre.setValue(chanson.getGenre());
+        GridPane grille = new GridPane();
+        grille.setHgap(8);
+        grille.setVgap(5);
+        grille.add(new Label("Titre"), 0, 0);
+        grille.add(titre, 1, 0);
+        grille.add(new Label("Artiste"), 0, 1);
+        grille.add(artiste, 1, 1);
+        grille.add(new Label("Album"), 0, 2);
+        grille.add(album, 1, 2);
+        grille.add(new Label("Année"), 0, 3);
+        grille.add(annee, 1, 3);
+        grille.add(new Label("Genre"), 0, 4);
+        grille.add(genre, 1, 4);
+        grille.add(new Label("Durée"), 0, 5);
+        grille.add(duree, 1, 5);
+        grille.add(new Label("Écoutes"), 0, 6);
+        grille.add(ecoutes, 1, 6);
+
+        dialog.getDialogPane().setContent(grille);
+        dialog.setResultConverter(button -> {
+            if (button == modifierButton) {
+                try {
+                    int anneeValeur = Integer.parseInt(annee.getText());
+                    int dureeValeur = Integer.parseInt(duree.getText());
+                    int ecoutesValeur = Integer.parseInt(ecoutes.getText());
+                    if (titre.getText().isBlank()
+                            || artiste.getText().isBlank()
+                            || album.getText().isBlank()
+                            || genre.getValue() == null
+                            || anneeValeur < 1900
+                            || dureeValeur <= 0
+                            || ecoutesValeur < 0) {
+                        new Alert(Alert.AlertType.ERROR, "Valeurs invalides").show();
+                        return null;
+                    }
+                    return new Chanson(
+                            chanson.getId(),
+                            titre.getText(),
+                            artiste.getText(),
+                            album.getText(),
+                            anneeValeur,
+                            genre.getValue(),
+                            dureeValeur,
+                            ecoutesValeur
+                    );
+
+                } catch (NumberFormatException e) {
+                    new Alert(Alert.AlertType.ERROR, "Valeurs invalides").show();
+                }
+            }
+            return null;
+        });
+        dialog.showAndWait().ifPresent(chansonModifiee -> {
+            try {
+                chansonDAO.modifier(chansonModifiee);
+                List<Chanson> chansons = chansonDAO.trouverTous();
+                bibliotheque = new Bibliotheque(chansons);
+                chansonsAffichees = bibliotheque.getChansons();
+                pageActuelle = 1;
+                afficherPage();
+            } catch (Exception e) {
+                new Alert(Alert.AlertType.ERROR, "Erreur lors de la modification").show();
+            }
+        });
     }
+
+
+
+
     @FXML
     private void supprimerChanson() {
+        Chanson chanson = tableChansons.getSelectionModel().getSelectedItem();
+        if (chanson == null) {
+            return;
+        }
+        Alert confirmation = new Alert(
+                Alert.AlertType.CONFIRMATION,
+                "Supprimer cette chanson?"
+        );
+        confirmation.showAndWait().ifPresent(reponse -> {
+            if (reponse == ButtonType.OK) {
+                try {
+                    chansonDAO.supprimer(chanson.getId());
+                    List<Chanson> chansons = chansonDAO.trouverTous();
+                    bibliotheque = new Bibliotheque(chansons);
+                    chansonsAffichees = bibliotheque.getChansons();
+                    afficherPage();
+                } catch (Exception e) {
+                    new Alert(
+                            Alert.AlertType.ERROR,
+                            "Erreur lors de la suppression."
+                    ).show();
+                }
+            }
+        });
     }
 }
