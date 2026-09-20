@@ -32,6 +32,11 @@ import org.example.service.ServiceBenchmark;
 import org.example.dao.ChansonDAO;
 import org.example.dao.ChansonDAOImpl;
 import javafx.scene.layout.GridPane;
+import org.example.dao.PlaylistDAO;
+import org.example.dao.PlaylistDAOImpl;
+import org.example.dao.PlaylistChansonDAO;
+import org.example.dao.PlaylistChansonDAOImpl;
+
 
 public class MainController {
 
@@ -89,6 +94,8 @@ public class MainController {
     private List<Chanson> chansonsAffichees;
     private ServiceTri serviceTri;
     private ServiceBenchmark serviceBenchmark;
+    private PlaylistDAO playlistDAO = new PlaylistDAOImpl();
+    private PlaylistChansonDAO playlistChansonDAO = new PlaylistChansonDAOImpl();
 
 
     @FXML
@@ -222,7 +229,6 @@ public class MainController {
         );
         labelPage.setText("Page 1");
     }
-
     @FXML
     private void creerPlaylist() {
         TextInputDialog dialog = new TextInputDialog();
@@ -230,9 +236,14 @@ public class MainController {
         dialog.setHeaderText("Créer une playlist");
         dialog.setContentText("Nom:");
         dialog.showAndWait().ifPresent(nom -> {
-            servicePlaylist.creerPlaylist(nom);
+            int prochainId = playlistDAO.trouverTous().size() + 1;
+            Playlist playlist = new Playlist(prochainId, nom);
+            playlistDAO.ajouter(playlist);
+            bibliotheque.ajouterPlaylist(playlist);
             listePlaylists.setItems(
-                    FXCollections.observableArrayList(bibliotheque.getPlaylists())
+                    FXCollections.observableArrayList(
+                            bibliotheque.getPlaylists()
+                    )
             );
             listePlaylists.getSelectionModel().selectLast();
         });
@@ -261,6 +272,10 @@ public class MainController {
                 Chanson chanson = tableChansons.getSelectionModel().getSelectedItem();
                 if (chanson != null) {
                     servicePlaylist.ajouterChanson(playlist, chanson);
+                    playlistChansonDAO.ajouterChanson(
+                            playlist.getId(),
+                            chanson.getId()
+                    );
 
                     tableChansons.setItems(
                             FXCollections.observableArrayList(playlist.getChansons())
@@ -277,6 +292,10 @@ public class MainController {
         Chanson chanson = tableChansons.getSelectionModel().getSelectedItem();
         if (playlist != null && chanson != null) {
             servicePlaylist.retirerChanson(playlist, chanson);
+            playlistChansonDAO.supprimerChanson(
+                    playlist.getId(),
+                    chanson.getId()
+            );
             tableChansons.setItems(
                     FXCollections.observableArrayList(playlist.getChansons())
             );
@@ -289,7 +308,7 @@ public class MainController {
 
         if (playlist != null) {
             servicePlaylist.supprimerPlaylist(playlist);
-
+            playlistDAO.supprimer(playlist.getId());
             listePlaylists.setItems(
                     FXCollections.observableArrayList(
                             bibliotheque.getPlaylists()

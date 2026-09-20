@@ -9,6 +9,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import org.example.model.Chanson;
 import org.example.model.Playlist;
 import org.example.service.ServicePlaylist;
+import org.example.dao.PlaylistChansonDAO;
+import org.example.dao.PlaylistChansonDAOImpl;
 
 public class PlaylistController {
 
@@ -23,6 +25,7 @@ public class PlaylistController {
     private Playlist playlist;
     private ServicePlaylist servicePlaylist;
     private MainController mainController;
+    private PlaylistChansonDAO playlistChansonDAO = new PlaylistChansonDAOImpl();
 
     @FXML
     public void initialize() {
@@ -56,12 +59,15 @@ public class PlaylistController {
                 "Durée totale : " + playlist.getDureeTotale() + " s"
         );
     }
-
     @FXML
     private void retirerChanson() {
         Chanson chanson = tablePlaylist.getSelectionModel().getSelectedItem();
         if (chanson != null) {
             servicePlaylist.retirerChanson(playlist, chanson);
+            playlistChansonDAO.supprimerChanson(
+                    playlist.getId(),
+                    chanson.getId()
+            );
             rafraichirPlaylist();
         }
     }
