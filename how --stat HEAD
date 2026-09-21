@@ -1,0 +1,10 @@
+[33m349f2f6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m completer les formulaires CRUD
+[33ma63ada1[m ajouter le CRUD des chansons
+[33m2df91fe[m completer le DAO et la bd
+[33m4c149aa[m securiser la connexion a la base de donnees
+[33m64687e2[m add: ajouter fonctions trouverparId, ajouter, modifier, supprimer dans ChansonDAOImpl
+[33m313e0fb[m utiliser la base de donnees pour les chansons
+[33m2922ae4[m fix: schema.sql et ajout de LecteurBD
+[33m6e42953[m add: ChansonDAO et ChansonDAOImpl, et fix des emplacement des fichiers
+[33m0898412[m add: ajouter ExampleConnection et schema.sql
+[33m45e4646[m Update total commits count in README

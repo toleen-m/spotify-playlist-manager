@@ -8,28 +8,62 @@
             stylesheets="@style.css">
 
     <top>
-        <VBox>
-            <Label text="Spotify Playlist Manager"/>
-            <HBox>
-                <TextField fx:id="champRecherche" promptText="Rechercher..."/>
-                <VBox>
+        <VBox spacing="12" styleClass="top-section">
+            <Label text="Spotify Playlist Manager" styleClass="main-title"/>
+            <HBox spacing="15" alignment="BOTTOM_LEFT" styleClass="search-section">
+
+                <VBox spacing="5">
                     <Label text="Recherche"/>
-                    <ComboBox fx:id="comboRecherche" promptText="Rechercher par"/>
+                    <TextField fx:id="champRecherche"
+                               promptText="Rechercher..."
+                               prefWidth="230"/>
                 </VBox>
-                <VBox>
-                    <Label text="Filtres"/>
-                    <ComboBox fx:id="comboGenre" promptText="Genre"/>
-                    <Label text="Durée max"/>
-                    <Slider fx:id="sliderDuree" min="0" max="400" value="400"/>
-                    <Label text="Écoutes min"/>
-                    <Slider fx:id="sliderEcoutes" min="0" max="500000" value="0"/>
+
+                <VBox spacing="5">
+                    <Label text="Rechercher par"/>
+                    <ComboBox fx:id="comboRecherche"
+                              promptText="Rechercher par"
+                              prefWidth="150"/>
                 </VBox>
-                <VBox>
+
+                <VBox spacing="5">
+                    <Label text="Genre"/>
+                    <ComboBox fx:id="comboGenre"
+                              promptText="Genre"
+                              prefWidth="140"/>
+                </VBox>
+
+                <VBox spacing="5">
                     <Label text="Tri"/>
-                    <ComboBox fx:id="comboTri" promptText="Trier"/>
+                    <ComboBox fx:id="comboTri"
+                              promptText="Trier"
+                              prefWidth="140"/>
                 </VBox>
-                <Button text="Lancer tri" onAction="#lancerTri"/>
-                <Button text="Benchmark" onAction="#afficherBenchmark"/>
+            </HBox>
+            <HBox spacing="20" alignment="CENTER_LEFT" styleClass="filter-section">
+
+                <VBox spacing="3">
+                    <Label text="Durée max"/>
+                    <Slider fx:id="sliderDuree"
+                            min="0"
+                            max="400"
+                            value="400"
+                            prefWidth="180"/>
+                </VBox>
+                <VBox spacing="3">
+                    <Label text="Écoutes min"/>
+                    <Slider fx:id="sliderEcoutes"
+                            min="0"
+                            max="500000"
+                            value="0"
+                            prefWidth="180"/>
+                </VBox>
+                <HBox spacing="12" alignment="BOTTOM_LEFT">
+                    <Button text="Lancer tri"
+                            onAction="#lancerTri"/>
+                    <Button text="Benchmark"
+                            onAction="#afficherBenchmark"/>
+                </HBox>
                 <Label fx:id="labelGagnant" text=""/>
             </HBox>
         </VBox>
@@ -73,23 +107,25 @@
 
 
     <bottom>
-        <VBox spacing="5">
-
+        <VBox spacing="10" styleClass="bottom-section">
             <Label fx:id="chansonActuelle" text="Aucune chanson"/>
-            <ProgressBar fx:id="progressionChanson" progress="0" prefWidth="300"/>
+            <ProgressBar fx:id="progressionChanson"
+                         progress="0"
+                         prefWidth="300"/>
             <Label fx:id="ecoutesChanson" text="Écoutes : 0"/>
 
-            <HBox>
+            <HBox spacing="12">
                 <Button text="Previous" onAction="#precedent"/>
                 <Button text="Play" onAction="#play"/>
                 <Button text="Pause" onAction="#pause"/>
                 <Button text="Next" onAction="#suivant"/>
                 <Button text="Shuffle" onAction="#shuffle"/>
+            </HBox>
+            <HBox spacing="12">
                 <Button text="Ajouter" onAction="#ajouterChanson"/>
                 <Button text="Modifier" onAction="#modifierChanson"/>
                 <Button text="Supprimer" onAction="#supprimerChanson"/>
             </HBox>
-
         </VBox>
     </bottom>
 

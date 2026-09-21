@@ -118,7 +118,7 @@
 .scroll-bar .thumb {
     -fx-background-color: #efb4ce;
     -fx-background-radius: 5;
-}}
+}
 
 .pagination {
     -fx-padding: 8px;
@@ -149,4 +149,29 @@
 
 .playlist-section .button {
     -fx-padding: 6px 10px;
+}
+
+.top-section {
+    -fx-padding: 10px;
+    -fx-spacing: 12px;
+}
+
+.main-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.search-section {
+    -fx-spacing: 15px;
+    -fx-alignment: bottom-left;
+}
+
+.filter-section {
+    -fx-spacing: 20px;
+    -fx-alignment: center-left;
+}
+
+.bottom-section {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
 }
