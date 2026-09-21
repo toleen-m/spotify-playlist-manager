@@ -1,4 +1,4 @@
-# Spotify Playlist Manager - Lab2
+# Spotify Playlist Manager - Lab3
 
 #### **Cours** : 420-930-MA — Algorithmes et modèles de programmation
 #### **Session** : Été 2026, groupe 25604
