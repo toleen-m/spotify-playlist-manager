@@ -7,7 +7,7 @@
 
 Application JavaFX de gestion de chansons et de playlists, inspirée des applications de streaming musical comme Spotify.
 Le projet permet de consulter une bibliothèque de chansons, effectuer des recherches et des filtres, trier les chansons avec plusieurs algorithmes, gérer des playlists et simuler la lecture d'une chanson.
-
+Le projet utilise maintenant PostgreSQL et JDBC pour permettre la sauvegarde des chansons et des playlists dans une base de donnees.
 ---
 
 ## Équipe
@@ -15,7 +15,7 @@ Le projet permet de consulter une bibliothèque de chansons, effectuer des reche
 | Nom complet | Adresse courriel | Contribution principale |
 |-------------|------------------|--------------------------|
 | Toleen Msabeh| msabeetl@gmail.com | modèles, services, tri, benchmark, lecture du CSV |
-| Unaiza Ali, Bhatti | e2596363@cmaisonneuve.qc.ca | UI FXML, Controller, CSS |
+| Unaiza Ali, Bhatti | e2596363@cmaisonneuve.qc.ca | UI FXML, Controller, CSS, integration de la base de donne |
 
 
 ---
@@ -61,7 +61,6 @@ Le projet permet de consulter une bibliothèque de chansons, effectuer des reche
 ### ❌ Non implémenté (assumer honnêtement)
 
 - Recherche insensible aux accents — manque de temps
-- Aucun bonus n'a été implémenté
 - Faire le filtre, le tri et recherche sur la list des chansons dans une playlist
 
 ---
@@ -133,6 +132,8 @@ Le projet permet de consulter une bibliothèque de chansons, effectuer des reche
 - Maven 3.13.0
 - (optionnel) IntelliJ IDEA / Eclipse
 - JavaFX 17.0.6
+- Postegres
+- PgAdmin
 
 ### Étapes
 
@@ -229,7 +230,7 @@ La solution utilisée a été de lancer le projet avec Maven et le plugin JavaFX
 
 ## Historique Git
 
-**Nombre total de commits** : 34
+**Nombre total de commits** : 43
 **Date du premier commit** : Sep 7, 2026
 **Date du dernier commit** : Sep 13, 2026
 
