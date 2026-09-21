@@ -12,10 +12,10 @@ Le projet utilise maintenant PostgreSQL et JDBC pour permettre la sauvegarde des
 
 ## Équipe
 
-| Nom complet | Adresse courriel | Contribution principale |
-|-------------|------------------|--------------------------|
-| Toleen Msabeh| msabeetl@gmail.com | modèles, services, tri, benchmark, lecture du CSV |
-| Unaiza Ali, Bhatti | e2596363@cmaisonneuve.qc.ca | UI FXML, Controller, CSS, integration de la base de donne |
+| Nom complet | Adresse courriel | Contribution principale                                   |
+|-------------|------------------|-----------------------------------------------------------|
+| Toleen Msabeh| msabeetl@gmail.com | modèles, services, tri, benchmark, lecture du CSV,  schéma SQL, scripts, connexion, implémentation DAO |
+| Unaiza Ali, Bhatti | e2596363@cmaisonneuve.qc.ca | UI FXML, Controller, CSS,  formulaires JavaFX, validation des saisies, gestion des erreurs, README |
 
 
 ---
@@ -135,21 +135,26 @@ Le projet utilise maintenant PostgreSQL et JDBC pour permettre la sauvegarde des
 - Postegres
 - PgAdmin
 
-### Étapes
+
+### Creation de la base de donnees
+
+- Cree dans pgAdmin4 une nouvelle database nommee `spotify_db`
+
+### Installation du projet
 
 ```bash
 # 1. Cloner le dépôt
 git clone https://github.com/toleen-m/spotify-playlist-manager.git
 cd spotify-playlist-manager
-
-# 2. Compiler
-mvn clean compile
-
-# 3. Lancer l'application
-mvn javafx:run
 ```
 
-### Alternative dans IntelliJ
+### Connexion au database spotify_db
+
+- Copier ce qui est dans `schema.sql` et coller dans un query tool du databse spotify_bd dans pgAdmin2, puis executer
+- Copier ce qui est dans `donnees.sql` et coller dans un autre query tool du meme databse, puis executer
+- Cree un fichier nommee `Connexion` dans le dossier dao/ et rempliser avec vos information (reference aux fichier modele ExampleConnexion)
+
+### Lancer l'application dans IntelliJ
 
 1. Ouvrir le projet dans IntelliJ (File > Open > dossier du projet)
 2. Attendre que Maven télécharge les dépendances
@@ -207,6 +212,7 @@ La solution utilisée a été de lancer le projet avec Maven et le plugin JavaFX
 
 ## Notes pour le correcteur
 
+- Pour lancer un tri, il faut choisir un critaire du combopox Tri, puis clicker le bouton `Lancer tri`
 - Le benchmark est accessible via le bouton benchmark
 - Pour ajouter une chanson dans un playlist: il faut clicker la playlist puis clicker le bouton `Ajouter chanson` apres, double clicler la chanson et reclicker le bouton `Ajouter chanson`
 - Pour voir la list des chansons d'une playlist: double clicker le nom du playlist
@@ -230,9 +236,9 @@ La solution utilisée a été de lancer le projet avec Maven et le plugin JavaFX
 
 ## Historique Git
 
-**Nombre total de commits** : 43
-**Date du premier commit** : Sep 7, 2026
-**Date du dernier commit** : Sep 13, 2026
+**Nombre total de commits** : 54
+**Date du premier commit** : Sep 15, 2026
+**Date du dernier commit** : Sep 20, 2026
 
 Voir l'onglet **Insights > Contributors** de GitHub pour voir la contribution de chacun.
 
